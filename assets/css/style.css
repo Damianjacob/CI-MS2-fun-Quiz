@@ -4,3 +4,23 @@ h1 {
     text-align: center;
 }
 
+/* score area */
+
+#score-area {
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* category area */
+
+#quiz-category-area {
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+}
+
+/* quiz area */
+#quiz-area {
+    text-align: center;
+    margin: 10px auto;
+}
