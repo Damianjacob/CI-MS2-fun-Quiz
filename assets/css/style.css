@@ -1,5 +1,4 @@
 /* Heading */
-
 h1 {
     text-align: center;
 }
@@ -15,7 +14,7 @@ h1 {
 
 #quiz-category-area {
     text-align: center;
-    margin: 10px auto;
+    margin: 30px auto;
     width: 80%;
 }
 
