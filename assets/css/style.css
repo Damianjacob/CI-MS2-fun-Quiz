@@ -16,10 +16,18 @@ h1 {
     text-align: center;
     margin: 30px auto;
     width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 /* quiz area */
 #quiz-area {
     text-align: center;
     margin: 10px auto;
+}
+
+#quiz-area p:hover {
+    color: blue;
 }
