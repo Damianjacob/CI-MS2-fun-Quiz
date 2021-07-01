@@ -14,10 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-/**runs the game */
+/**runs the quiz and selects one of the four categories based on which button the user clicked on */
 function runQuiz(quizCategory){
     if (quizCategory === 'geography'){
         displayGeographyQuestion();
+    } else if (quizCategory === 'science'){
+        displayScienceQuestion();
+    } else if (quizCategory === 'music'){
+        displayMusicQuestion();
+    } else if (quizCategory === 'animals'){
+        displayAnimalsQuestion();
+    } else {
+        alert(`unknown category: ${quizCategory}`)
     }
 }
 
@@ -38,18 +46,20 @@ function gameOver(){
 }
 
 function displayGeographyQuestion(){
-
+    alert('You clicked on the geography button')
+    let question = document.getElementById('question');
+    question.innerText  = geographyQuestions[0].question;
 }
 
 function displayScienceQuestion(){
-
+    alert('You clicked on the science button')
 }
 
 function displayMusicQuestion(){
-
+    alert('You clicked on the music button')
 }
 
 function displayAnimalsQuestion(){
-
+    alert('You clicked on the animals button')
 }
 
