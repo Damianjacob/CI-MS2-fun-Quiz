@@ -10,7 +10,99 @@ let geographyQuestions = [
         b: 'China',
         c: 'Canada',
         d: 'United States of America',
+        answers: ['Russia', 'China', 'Canada', 'United States of America'],
         correctAnswer: 'Russia'
+    },
+    {
+        question: 'Question number 2 (index 1)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 3 (index 2)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 4 (index 3)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 5 (index 4)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 6 (index 5)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 7 (index 6)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 8 (index 7)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 9 (index 8)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 10 (index 9)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
+        correctAnswer: ''
+    },
+]
+
+let scienceQuestions = [
+    {
+        question: 'Question number 1 (index 0)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: 'd'
     },
     {
         question: 'Question number 2 (index 1)',
@@ -86,15 +178,169 @@ let geographyQuestions = [
     },
 ]
 
-let scienceQuestions = {
+let musicQuestions = [
+    {
+        question: 'Question number 1 (index 0)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: 'd'
+    },
+    {
+        question: 'Question number 2 (index 1)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 3 (index 2)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 4 (index 3)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 5 (index 4)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 6 (index 5)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 7 (index 6)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 8 (index 7)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 9 (index 8)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 10 (index 9)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+]
 
-}
-
-let musicQuestions = {
-
-}
-
-let animalsQuestions = {
-
-}
+let animalsQuestions = [
+    {
+        question: 'Question number 1 (index 0)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: 'd'
+    },
+    {
+        question: 'Question number 2 (index 1)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 3 (index 2)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 4 (index 3)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 5 (index 4)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 6 (index 5)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 7 (index 6)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 8 (index 7)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 9 (index 8)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+    {
+        question: 'Question number 10 (index 9)',
+        a: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
+        correctAnswer: ''
+    },
+]
 

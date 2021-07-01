@@ -71,9 +71,17 @@ function gameOver(){
 }
 
 function displayGeographyQuestion(){
+    let i = 0
     alert('You clicked on the geography button')
     let question = document.getElementById('question');
-    question.innerText  = geographyQuestions[0].question;
+    question.innerText  = geographyQuestions[i].question;
+    let answerOptions = document.getElementsByClassName('answer-option');
+    for (answerOption of answerOptions){
+        let a = 0;
+        answerOption.innerText = geographyQuestions[i].answers[a];
+        a++;
+    }
+    i++;
 }
 
 function displayScienceQuestion(){
