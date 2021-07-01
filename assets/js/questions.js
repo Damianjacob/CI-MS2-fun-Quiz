@@ -19,6 +19,7 @@ let geographyQuestions = [
         b: 'b',
         c: 'c',
         d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {

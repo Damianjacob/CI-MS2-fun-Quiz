@@ -1,4 +1,4 @@
-// this code is not working for some reason, find out why
+
 document.addEventListener('DOMContentLoaded', function() {
     shuffleQuestions();
     let buttons = document.getElementsByTagName('button');
@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 })
+
+let answerElements = document.getElementsByClassName('answer-options');
+answerElements.addEventListener('click', function(){
+    this.dataset.selected = true;
+    for (answer of answerElements){
+        answer.style.backgroundColor = 'blue';
+    }
+})
+
 let geographyIndex = 0
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
 function runQuiz(quizCategory){
@@ -70,18 +79,18 @@ function gameOver(){
 
 }
 
+let geographyQuestionIndex = 0;
+
 function displayGeographyQuestion(){
-    let i = 0
-    alert('You clicked on the geography button')
     let question = document.getElementById('question');
-    question.innerText  = geographyQuestions[i].question;
+    question.innerText  = geographyQuestions[geographyQuestionIndex].question;
     let answerOptions = document.getElementsByClassName('answer-option');
-    for (answerOption of answerOptions){
-        let a = 0;
-        answerOption.innerText = geographyQuestions[i].answers[a];
+    let a = 0;
+    for (answerOption of answerOptions){  
+        answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
         a++;
     }
-    i++;
+    geographyQuestionIndex++;
 }
 
 function displayScienceQuestion(){
