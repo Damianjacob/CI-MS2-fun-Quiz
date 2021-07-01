@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 })
-
+let geographyIndex = 0
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
 function runQuiz(quizCategory){
-    if (quizCategory === 'geography'){
+    if (quizCategory === 'geography'){       
         displayGeographyQuestion();
+        geographyIndex++;
+        console.log(geographyIndex)
     } else if (quizCategory === 'science'){
         displayScienceQuestion();
     } else if (quizCategory === 'music'){
@@ -27,6 +29,12 @@ function runQuiz(quizCategory){
     } else {
         alert(`unknown category: ${quizCategory}`)
     }
+}
+
+function shuffleQuestions(){
+    geographyQuestions.sort(function shuffle(a, b){
+        return 0.5 - Math.random();
+    })
 }
 
 function checkAnswer(){
@@ -49,6 +57,7 @@ function displayGeographyQuestion(){
     alert('You clicked on the geography button')
     let question = document.getElementById('question');
     question.innerText  = geographyQuestions[0].question;
+    shuffleQuestions();
 }
 
 function displayScienceQuestion(){
