@@ -1,5 +1,6 @@
 // this code is not working for some reason, find out why
 document.addEventListener('DOMContentLoaded', function() {
+    shuffleQuestions();
     let buttons = document.getElementsByTagName('button');
     
     for (let button of buttons){
@@ -31,7 +32,23 @@ function runQuiz(quizCategory){
     }
 }
 
+/**This function shuffles the questions from the arrays in questions.js. 
+ * It is called each time the DOM content is loaded (see eventListener at the top), 
+ * so that every time the user reloads the page, there is a different order.
+ */
 function shuffleQuestions(){
+    geographyQuestions.sort(function shuffle(a, b){
+        return 0.5 - Math.random();
+    })
+
+    scienceQuestions.sort(function shuffle(a, b){
+        return 0.5 - Math.random();
+    })
+
+    musicQuestions.sort(function shuffle(a, b){
+        return 0.5 - Math.random();
+    })
+
     geographyQuestions.sort(function shuffle(a, b){
         return 0.5 - Math.random();
     })
@@ -57,7 +74,6 @@ function displayGeographyQuestion(){
     alert('You clicked on the geography button')
     let question = document.getElementById('question');
     question.innerText  = geographyQuestions[0].question;
-    shuffleQuestions();
 }
 
 function displayScienceQuestion(){
