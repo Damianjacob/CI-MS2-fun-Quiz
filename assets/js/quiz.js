@@ -15,13 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-let answerElements = document.getElementsByClassName('answer-options');
-answerElements.addEventListener('click', function(){
-    this.dataset.selected = true;
-    for (answer of answerElements){
-        answer.style.backgroundColor = 'blue';
-    }
-})
 
 let geographyIndex = 0
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
