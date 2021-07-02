@@ -75,15 +75,19 @@ function gameOver(){
 let geographyQuestionIndex = 0;
 
 function displayGeographyQuestion(){
-    let question = document.getElementById('question');
-    question.innerText  = geographyQuestions[geographyQuestionIndex].question;
-    let answerOptions = document.getElementsByClassName('answer-option');
-    let a = 0;
-    for (answerOption of answerOptions){  
-        answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
-        a++;
+    if (geographyQuestionIndex < 10) {
+        let question = document.getElementById('question');
+        question.innerText  = geographyQuestions[geographyQuestionIndex].question;
+        let answerOptions = document.getElementsByClassName('answer-option');
+        let a = 0;
+        for (answerOption of answerOptions){  
+            answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
+            a++;
+        }
+        geographyQuestionIndex++;
+    } else {
+        alert('There are no more geography questions!')
     }
-    geographyQuestionIndex++;
 }
 
 function displayScienceQuestion(){
