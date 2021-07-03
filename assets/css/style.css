@@ -28,6 +28,6 @@ h1 {
     margin: 10px auto;
 }
 
-#quiz-area p:hover {
+#answer-option:hover {
     color: blue;
 }
