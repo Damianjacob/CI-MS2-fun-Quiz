@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-// document.getElementById('option-a').addEventListener('click', function(){
-//     alert('you clicked on Option a, you sexy mofo')
-//     let options = document.getElementsByClassName('answer-option');
-//     for (option of options){
-//         option.style.backgroundColor = 'blue'
-//     }
-// })
-
+/**
+ * This adds an eventListener to each answer option in the quiz section.
+ * If the user clicks on one option, first the background of all options
+ * will be set to white, then the background of the option the user clicked on will
+ * be set to light blue.
+ */
 let options = document.getElementsByClassName('answer-option');
 for (option of options){
     option.addEventListener('click', function(){
