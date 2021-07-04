@@ -4,14 +4,12 @@ h1 {
 }
 
 /* score area */
-
 #score-area {
     text-align: center;
     margin: 10px auto;
 }
 
 /* category area */
-
 #quiz-category-area {
     text-align: center;
     margin: 30px auto;
@@ -26,4 +24,16 @@ h1 {
 #quiz-area {
     text-align: center;
     margin: 10px auto;
+}
+
+#quiz-area label:hover{
+    background-color: aquamarine
+}
+
+#quiz-area button{
+    margin: 10px auto;
+}
+
+#quiz-area input {
+    display: none;
 }
