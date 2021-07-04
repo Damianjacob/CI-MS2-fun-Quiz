@@ -27,7 +27,3 @@ h1 {
     text-align: center;
     margin: 10px auto;
 }
-
-#answer-option:hover {
-    color: blue;
-}

@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
+// document.getElementById('option-a').addEventListener('click', function(){
+//     alert('you clicked on Option a, you sexy mofo')
+//     let options = document.getElementsByClassName('answer-option');
+//     for (option of options){
+//         option.style.backgroundColor = 'blue'
+//     }
+// })
+
+let options = document.getElementsByClassName('answer-option');
+for (option of options){
+    option.addEventListener('click', function(){
+        for (option of options){
+            option.style.backgroundColor = 'white'
+        }
+        this.style.backgroundColor = 'lightBlue'
+    })
+}
 
 let geographyIndex = 0
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
@@ -54,6 +71,20 @@ function shuffleQuestions(){
     geographyQuestions.sort(function shuffle(a, b){
         return 0.5 - Math.random();
     })
+}
+
+function highlightSelectedAnswer(){
+    alert('executing highlightSelectedAnswer')
+    let radioButtons = document.getElementsByClassName('answer-radio');
+    let radioLabels = document.getElementsByClassName('answer-option');
+
+    for (rb in radioButtons){
+        if (rb.checked){
+            for (label in radioLabels){
+                label.style.backgroundColor = 'blue'
+            }
+        }
+    }
 }
 
 function checkAnswer(){
