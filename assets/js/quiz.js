@@ -71,35 +71,35 @@ function shuffleQuestions(){
     })
 }
 
-function highlightSelectedAnswer(){
-    alert('executing highlightSelectedAnswer')
-    let radioButtons = document.getElementsByClassName('answer-radio');
-    let radioLabels = document.getElementsByClassName('answer-option');
-
-    for (rb in radioButtons){
-        if (rb.checked){
-            for (label in radioLabels){
-                label.style.backgroundColor = 'blue'
-            }
-        }
-    }
-}
-
-
 
 function checkAnswer(){
     console.log('checking answer')
     let answers = document.getElementsByClassName('answer-radio');
+    let answerLabels = document.getElementsByTagName('label');
     let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
-    let selectedAnswer = function(){
-        for (answer of answers) {
-            if (answer.checked) {
-                return answer;
+    function getSelectedAnswerRadio(){
+        for (answer of answers){
+            if (answer.checked){
+                return answer.getAttribute('id')
+            }
+        }
+    }
+    
+    let selectedRadioID = getSelectedAnswerRadio()
+
+    function getSelectedLabel(){
+        for (aL of answerLabels){
+            if (aL.getAttribute('for') === selectedRadioID){
+                return aL.getAttribute('for');
             }
         }
     }
 
-    console.log(`the selected answer is ${selectedAnswer}`)
+    let selectedLabel = getSelectedLabel()
+    console.log(`the first element of answerlabels is ${answerLabels[0].innerText}`)
+    console.log(`the answerlabels are ${answerLabels}`)
+    console.log(`the selected label is ${selectedLabel}`)
+    console.log(`the selected radio id is ${selectedRadioID}`)
     console.log(`the correct answer is ${correctAnswer}`)
 
     }
