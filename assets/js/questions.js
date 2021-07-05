@@ -20,7 +20,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'b'
     },
     {
         question: 'Question number 3 (index 2)',
@@ -29,7 +29,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'c'
     },
     {
         question: 'Question number 4 (index 3)',
@@ -38,7 +38,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'd'
     },
     {
         question: 'Question number 5 (index 4)',
@@ -47,7 +47,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'a'
     },
     {
         question: 'Question number 6 (index 5)',
@@ -56,7 +56,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'b'
     },
     {
         question: 'Question number 7 (index 6)',
@@ -65,7 +65,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'c'
     },
     {
         question: 'Question number 8 (index 7)',
@@ -74,7 +74,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'd'
     },
     {
         question: 'Question number 9 (index 8)',
@@ -83,7 +83,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'a'
     },
     {
         question: 'Question number 10 (index 9)',
@@ -92,7 +92,7 @@ let geographyQuestions = [
         c: 'c',
         d: 'd',
         answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        correctAnswer: 'b'
     },
 ]
 

@@ -85,13 +85,24 @@ function highlightSelectedAnswer(){
     }
 }
 
+
+
 function checkAnswer(){
     console.log('checking answer')
-}
+    let answers = document.getElementsByClassName('answer-radio');
+    let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
+    let selectedAnswer = function(){
+        for (answer of answers) {
+            if (answer.checked) {
+                return answer;
+            }
+        }
+    }
 
-function incrementScore(){
+    console.log(`the selected answer is ${selectedAnswer}`)
+    console.log(`the correct answer is ${correctAnswer}`)
 
-}
+    }
 
 function diminishLifePoints(){
 
