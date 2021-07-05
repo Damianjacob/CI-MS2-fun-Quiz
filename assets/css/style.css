@@ -26,6 +26,11 @@ h1 {
     margin: 10px auto;
 }
 
+#quiz-area label{
+margin: 15px auto;
+border: 1px solid black;
+}
+
 #quiz-area label:hover{
     background-color: aquamarine
 }
@@ -35,5 +40,6 @@ h1 {
 }
 
 #quiz-area input {
+    margin: 10px auto;
     display: none;
 }
