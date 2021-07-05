@@ -71,7 +71,11 @@ function shuffleQuestions(){
     })
 }
 
-
+/**
+ * Compares the id of the radio button selected by the user to the 'for'
+ * attribute of its label. Then it compares the innerText of the label
+ * to the correct answer to the question, which is stored in the questions.js file. 
+ */
 function checkAnswer(){
     console.log('checking answer')
     let answers = document.getElementsByClassName('answer-radio');
@@ -98,17 +102,24 @@ function checkAnswer(){
     let selectedLabel = getSelectedLabel()
 
     if (selectedLabel.innerText === correctAnswer){
+        selectedLabel.style.backgroundColor = 'green'
         alert(`That's correct!`)
     } else {
+        selectedLabel.style.backgroundColor = 'red'
+        for (aL of answerLabels){
+            if (aL.innerText === correctAnswer){
+                aL.style.backgroundColor = 'green'
+            }
+        }
         alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`)
     }
-    console.log(`the first element of answerlabels is ${answerLabels[0].innerText}`)
+
+    // tests to see if the functions work properly
     console.log(`the answerlabels are ${answerLabels}`)
     console.log(`the selected label is ${selectedLabel.innerText}`)
     console.log(`the selected radio id is ${selectedRadioID}`)
     console.log(`the correct answer is ${correctAnswer}`)
-
-    }
+}
 
 function diminishLifePoints(){
 
