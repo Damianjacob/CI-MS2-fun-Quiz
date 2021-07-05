@@ -90,15 +90,21 @@ function checkAnswer(){
     function getSelectedLabel(){
         for (aL of answerLabels){
             if (aL.getAttribute('for') === selectedRadioID){
-                return aL.getAttribute('for');
+                return aL;
             }
         }
     }
 
     let selectedLabel = getSelectedLabel()
+
+    if (selectedLabel.innerText === correctAnswer){
+        alert(`That's correct!`)
+    } else {
+        alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`)
+    }
     console.log(`the first element of answerlabels is ${answerLabels[0].innerText}`)
     console.log(`the answerlabels are ${answerLabels}`)
-    console.log(`the selected label is ${selectedLabel}`)
+    console.log(`the selected label is ${selectedLabel.innerText}`)
     console.log(`the selected radio id is ${selectedRadioID}`)
     console.log(`the correct answer is ${correctAnswer}`)
 
