@@ -18,14 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
+
+let options = document.getElementsByClassName('answer-option');
+
 /**
  * This adds an eventListener to each answer option in the quiz section.
  * If the user clicks on one option, first the background of all options
  * will be set to white, then the background of the option the user clicked on will
  * be set to light blue.
  */
-let options = document.getElementsByClassName('answer-option');
-
 for (option of options){
     option.addEventListener('click', function(){
         for (option of options){
@@ -81,20 +82,22 @@ function shuffleQuestions(){
  * the answer label selected by the user to red and the correct answer to green.
  */
 function checkAnswer(){
-    console.log('checking answer')
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
     let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
+
+    // ** returns the radio button that the user has selected*/
     function getSelectedAnswerRadio(){
         for (answer of answers){
             if (answer.checked){
-                return answer.getAttribute('id')
+                return answer
             }
         }
     }
     
-    let selectedRadioID = getSelectedAnswerRadio()
+    let selectedRadioID = getSelectedAnswerRadio().getAttribute('id')
 
+    /**returns the label attached to the radio button which the user has selected */
     function getSelectedLabel(){
         for (aL of answerLabels){
             if (aL.getAttribute('for') === selectedRadioID){
@@ -105,9 +108,12 @@ function checkAnswer(){
 
     let selectedLabel = getSelectedLabel()
 
+    //*compares the innertext of the answer label selected by the user to the correct
+    /*answer, which is stored in the questions.js file */
     if (selectedLabel.innerText === correctAnswer){
         selectedLabel.style.backgroundColor = 'green'
-        alert(`That's correct!`)
+        incrementScore()
+        alert(`That's correct!`)    
     } else {
         selectedLabel.style.backgroundColor = 'red'
         for (aL of answerLabels){
@@ -115,7 +121,9 @@ function checkAnswer(){
                 aL.style.backgroundColor = 'green'
             }
         }
+        diminishLifePoints()
         alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`)
+        if 
     }
 
     // tests to see if the functions work properly
@@ -133,12 +141,32 @@ function goToNextQuestion(){
     runQuiz(currentCategory)
 }
 
-function diminishLifePoints(){
+let score = document.getElementById('score')
 
+/**
+ * increments the innertext of the score span by 10 
+ */
+function incrementScore(){ 
+    score.innerText = parseInt(score.innerText) + 10
+}
+
+let lifePoints = document.getElementById('life-points');
+
+/**
+ * diminishes the innertext of the life-points span by 1
+ */
+function diminishLifePoints(){
+    lifePoints.innerText = parseInt(lifePoints.innerText) - 1;
+    if (lifePoints.innerText == 0){
+        gameOver()
+    }
 }
 
 function gameOver(){
-
+    alert(`Game Over! Your Score is ${score.innerText}`)
+    score.innerText = 0
+    lifePoints.innerText = 5
+    geographyQuestionIndex = 0
 }
 
 let geographyQuestionIndex = 0;
