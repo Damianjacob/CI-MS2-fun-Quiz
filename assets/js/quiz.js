@@ -1,3 +1,4 @@
+let currentCategory
 
 document.addEventListener('DOMContentLoaded', function() {
     shuffleQuestions();
@@ -10,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (button.dataset.buttonType === 'next'){
                 goToNextQuestion()
             } else {
-                let category = button.dataset.buttonType;
-                runQuiz(category)
+                currentCategory = button.dataset.buttonType;
+                runQuiz(currentCategory)
             }
         });
     }
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * be set to light blue.
  */
 let options = document.getElementsByClassName('answer-option');
+
 for (option of options){
     option.addEventListener('click', function(){
         for (option of options){
@@ -124,7 +126,11 @@ function checkAnswer(){
 }
 
 function goToNextQuestion(){
-
+    let answerLabels = document.getElementsByTagName('label');
+    for (aL of answerLabels){
+        aL.style.backgroundColor = 'white'
+    }
+    runQuiz(currentCategory)
 }
 
 function diminishLifePoints(){
