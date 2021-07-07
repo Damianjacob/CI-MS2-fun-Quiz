@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(){
             if (button.dataset.buttonType === 'confirm'){
                 checkAnswer();
+            } else if (button.dataset.buttonType === 'next'){
+                goToNextQuestion()
             } else {
                 let category = button.dataset.buttonType;
                 runQuiz(category)
@@ -31,13 +33,10 @@ for (option of options){
     })
 }
 
-let geographyIndex = 0
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
 function runQuiz(quizCategory){
     if (quizCategory === 'geography'){       
         displayGeographyQuestion();
-        geographyIndex++;
-        console.log(geographyIndex)
     } else if (quizCategory === 'science'){
         displayScienceQuestion();
     } else if (quizCategory === 'music'){
@@ -74,7 +73,10 @@ function shuffleQuestions(){
 /**
  * Compares the id of the radio button selected by the user to the 'for'
  * attribute of its label. Then it compares the innerText of the label
- * to the correct answer to the question, which is stored in the questions.js file. 
+ * to the correct answer of the question, which is stored in the questions.js file. 
+ * if the user selected the correct answer, this function will set the background color
+ * of that answer label to green, otherwise it will set the background color of
+ * the answer label selected by the user to red and the correct answer to green.
  */
 function checkAnswer(){
     console.log('checking answer')
@@ -119,6 +121,10 @@ function checkAnswer(){
     console.log(`the selected label is ${selectedLabel.innerText}`)
     console.log(`the selected radio id is ${selectedRadioID}`)
     console.log(`the correct answer is ${correctAnswer}`)
+}
+
+function goToNextQuestion(){
+
 }
 
 function diminishLifePoints(){
