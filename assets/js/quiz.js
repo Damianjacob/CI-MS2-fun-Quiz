@@ -1,14 +1,14 @@
 let currentCategory
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     shuffleQuestions();
     let buttons = document.getElementsByTagName('button');
-    
-    for (let button of buttons){
-        button.addEventListener('click', function(){
-            if (button.dataset.buttonType === 'confirm'){
+
+    for (let button of buttons) {
+        button.addEventListener('click', function () {
+            if (button.dataset.buttonType === 'confirm') {
                 checkAnswer();
-            } else if (button.dataset.buttonType === 'next'){
+            } else if (button.dataset.buttonType === 'next') {
                 goToNextQuestion()
             } else {
                 currentCategory = button.dataset.buttonType;
@@ -27,9 +27,9 @@ let options = document.getElementsByClassName('answer-option');
  * will be set to white, then the background of the option the user clicked on will
  * be set to light blue.
  */
-for (option of options){
-    option.addEventListener('click', function(){
-        for (option of options){
+for (option of options) {
+    option.addEventListener('click', function () {
+        for (option of options) {
             option.style.backgroundColor = 'white'
         }
         this.style.backgroundColor = 'lightBlue'
@@ -37,14 +37,14 @@ for (option of options){
 }
 
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
-function runQuiz(quizCategory){
-    if (quizCategory === 'geography'){       
+function runQuiz(quizCategory) {
+    if (quizCategory === 'geography') {
         displayGeographyQuestion();
-    } else if (quizCategory === 'science'){
+    } else if (quizCategory === 'science') {
         displayScienceQuestion();
-    } else if (quizCategory === 'music'){
+    } else if (quizCategory === 'music') {
         displayMusicQuestion();
-    } else if (quizCategory === 'animals'){
+    } else if (quizCategory === 'animals') {
         displayAnimalsQuestion();
     } else {
         alert(`unknown category: ${quizCategory}`)
@@ -55,20 +55,20 @@ function runQuiz(quizCategory){
  * It is called each time the DOM content is loaded (see eventListener at the top), 
  * so that every time the user reloads the page, there is a different order.
  */
-function shuffleQuestions(){
-    geographyQuestions.sort(function shuffle(a, b){
+function shuffleQuestions() {
+    geographyQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
     })
 
-    scienceQuestions.sort(function shuffle(a, b){
+    scienceQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
     })
 
-    musicQuestions.sort(function shuffle(a, b){
+    musicQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
     })
 
-    geographyQuestions.sort(function shuffle(a, b){
+    geographyQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
     })
 }
@@ -81,26 +81,26 @@ function shuffleQuestions(){
  * of that answer label to green, otherwise it will set the background color of
  * the answer label selected by the user to red and the correct answer to green.
  */
-function checkAnswer(){
+function checkAnswer() {
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
     let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
 
     // ** returns the radio button that the user has selected*/
-    function getSelectedAnswerRadio(){
-        for (answer of answers){
-            if (answer.checked){
+    function getSelectedAnswerRadio() {
+        for (answer of answers) {
+            if (answer.checked) {
                 return answer
             }
         }
     }
-    
+
     let selectedRadioID = getSelectedAnswerRadio().getAttribute('id')
 
     /**returns the label attached to the radio button which the user has selected */
-    function getSelectedLabel(){
-        for (aL of answerLabels){
-            if (aL.getAttribute('for') === selectedRadioID){
+    function getSelectedLabel() {
+        for (aL of answerLabels) {
+            if (aL.getAttribute('for') === selectedRadioID) {
                 return aL;
             }
         }
@@ -110,20 +110,23 @@ function checkAnswer(){
 
     //*compares the innertext of the answer label selected by the user to the correct
     /*answer, which is stored in the questions.js file */
-    if (selectedLabel.innerText === correctAnswer){
+    if (selectedLabel.innerText === correctAnswer) {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
-        alert(`That's correct!`)    
+        alert(`That's correct!`)
     } else {
-        selectedLabel.style.backgroundColor = 'red'
-        for (aL of answerLabels){
-            if (aL.innerText === correctAnswer){
-                aL.style.backgroundColor = 'green'
+        diminishLifePoints()
+        if (lifePoints.innerText == 0) {
+            gameOver()
+        } else {
+            alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`);
+            selectedLabel.style.backgroundColor = 'red'
+            for (aL of answerLabels) {
+                if (aL.innerText === correctAnswer) {
+                    aL.style.backgroundColor = 'green'
+                }
             }
         }
-        diminishLifePoints()
-        alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`)
-        if 
     }
 
     // tests to see if the functions work properly
@@ -133,9 +136,9 @@ function checkAnswer(){
     console.log(`the correct answer is ${correctAnswer}`)
 }
 
-function goToNextQuestion(){
+function goToNextQuestion() {
     let answerLabels = document.getElementsByTagName('label');
-    for (aL of answerLabels){
+    for (aL of answerLabels) {
         aL.style.backgroundColor = 'white'
     }
     runQuiz(currentCategory)
@@ -146,7 +149,7 @@ let score = document.getElementById('score')
 /**
  * increments the innertext of the score span by 10 
  */
-function incrementScore(){ 
+function incrementScore() {
     score.innerText = parseInt(score.innerText) + 10
 }
 
@@ -155,14 +158,11 @@ let lifePoints = document.getElementById('life-points');
 /**
  * diminishes the innertext of the life-points span by 1
  */
-function diminishLifePoints(){
+function diminishLifePoints() {
     lifePoints.innerText = parseInt(lifePoints.innerText) - 1;
-    if (lifePoints.innerText == 0){
-        gameOver()
-    }
 }
 
-function gameOver(){
+function gameOver() {
     alert(`Game Over! Your Score is ${score.innerText}`)
     score.innerText = 0
     lifePoints.innerText = 5
@@ -171,13 +171,13 @@ function gameOver(){
 
 let geographyQuestionIndex = 0;
 
-function displayGeographyQuestion(){
+function displayGeographyQuestion() {
     if (geographyQuestionIndex < 10) {
         let question = document.getElementById('question');
-        question.innerText  = geographyQuestions[geographyQuestionIndex].question;
+        question.innerText = geographyQuestions[geographyQuestionIndex].question;
         let answerOptions = document.getElementsByClassName('answer-option');
         let a = 0;
-        for (answerOption of answerOptions){  
+        for (answerOption of answerOptions) {
             answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
             a++;
         }
@@ -187,15 +187,15 @@ function displayGeographyQuestion(){
     }
 }
 
-function displayScienceQuestion(){
+function displayScienceQuestion() {
     alert('You clicked on the science button')
 }
 
-function displayMusicQuestion(){
+function displayMusicQuestion() {
     alert('You clicked on the music button')
 }
 
-function displayAnimalsQuestion(){
+function displayAnimalsQuestion() {
     alert('You clicked on the animals button')
 }
 
