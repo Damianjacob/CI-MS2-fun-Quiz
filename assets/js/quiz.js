@@ -1,4 +1,8 @@
+// quiz variables
 let currentCategory
+
+let timesAnswerChecked = 0
+let options = document.getElementsByClassName('answer-option');
 
 document.addEventListener('DOMContentLoaded', function () {
     shuffleQuestions();
@@ -18,14 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
-
-let options = document.getElementsByClassName('answer-option');
-
 /**
  * This adds an eventListener to each answer option in the quiz section.
  * If the user clicks on one option, first the background of all options
  * will be set to white, then the background of the option the user clicked on will
  * be set to light blue.
+ * @options array composed by all elements with the class of answer-option.
+ * declared under quiz variables at the top.
  */
 for (option of options) {
     option.addEventListener('click', function () {
@@ -73,6 +76,7 @@ function shuffleQuestions() {
     })
 }
 
+
 /**
  * Compares the id of the radio button selected by the user to the 'for'
  * attribute of its label. Then it compares the innerText of the label
@@ -97,7 +101,8 @@ function checkAnswer() {
 
     let selectedRadioID = getSelectedAnswerRadio().getAttribute('id')
 
-    /**returns the label attached to the radio button which the user has selected */
+    /**returns the label attached to the radio button which the user has selected 
+    */
     function getSelectedLabel() {
         for (aL of answerLabels) {
             if (aL.getAttribute('for') === selectedRadioID) {
@@ -129,11 +134,13 @@ function checkAnswer() {
         }
     }
 
+    timesAnswerChecked++
+
     // tests to see if the functions work properly
-    console.log(`the answerlabels are ${answerLabels}`)
-    console.log(`the selected label is ${selectedLabel.innerText}`)
-    console.log(`the selected radio id is ${selectedRadioID}`)
-    console.log(`the correct answer is ${correctAnswer}`)
+    // console.log(`the answerlabels are ${answerLabels}`)
+    // console.log(`the selected label is ${selectedLabel.innerText}`)
+    // console.log(`the selected radio id is ${selectedRadioID}`)
+    // console.log(`the correct answer is ${correctAnswer}`)
 }
 
 function goToNextQuestion() {
@@ -146,11 +153,30 @@ function goToNextQuestion() {
 
 let score = document.getElementById('score')
 
+/**checks whether the user has selected any answer and whether they have submitted it */
+// function userAnswer() {
+//     let x = 0;
+//     let answers = document.getElementsByClassName('answer-radio');
+//     console.log(answers)
+//     for (answer of answers){
+//         console.log(answer.checked)
+//     }
+// }
+
+// let didUserSelectAnswer = userAnswer();
+
+
 /**
  * increments the innertext of the score span by 10 
  */
 function incrementScore() {
-    score.innerText = parseInt(score.innerText) + 10
+    let categoryIndex = `${currentCategory}QuestionIndex`
+    if (timesAnswerChecked != categoryIndex) {
+        alert(`Nice try! You can't submit the same answer twice :)`);
+        timesAnswerChecked--;
+    } else {
+        score.innerText = parseInt(score.innerText) + 10
+    }
 }
 
 let lifePoints = document.getElementById('life-points');
@@ -167,15 +193,23 @@ function gameOver() {
     score.innerText = 0
     lifePoints.innerText = 5
     geographyQuestionIndex = 0
+    scienceQuestionIndex = 0
+    musicQuestionIndex = 0
+    animalsQuestionIndex = 0
+    question.innerText = ''
+    for (answer of answerOptions) {
+        answer.innerText = '';
+    }
 }
 
 let geographyQuestionIndex = 0;
+let question = document.getElementById('question');
+let answerOptions = document.getElementsByClassName('answer-option');
+
 
 function displayGeographyQuestion() {
     if (geographyQuestionIndex < 10) {
-        let question = document.getElementById('question');
         question.innerText = geographyQuestions[geographyQuestionIndex].question;
-        let answerOptions = document.getElementsByClassName('answer-option');
         let a = 0;
         for (answerOption of answerOptions) {
             answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
@@ -187,13 +221,19 @@ function displayGeographyQuestion() {
     }
 }
 
+let scienceQuestionIndex = 0
+
 function displayScienceQuestion() {
     alert('You clicked on the science button')
 }
 
+let musicQuestionIndex = 0
+
 function displayMusicQuestion() {
     alert('You clicked on the music button')
 }
+
+let animalsQuestionIndex = 0
 
 function displayAnimalsQuestion() {
     alert('You clicked on the animals button')
