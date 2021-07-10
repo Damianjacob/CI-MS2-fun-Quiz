@@ -1,7 +1,5 @@
 // quiz variables
 let currentCategory
-
-let timesAnswerChecked = 0
 let options = document.getElementsByClassName('answer-option');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -166,6 +164,7 @@ let score = document.getElementById('score')
 // let didUserSelectAnswer = userAnswer();
 
 
+let timesAnswerChecked = 0
 /**
  * increments the innertext of the score span by 10 
  */

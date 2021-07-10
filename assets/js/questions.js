@@ -6,175 +6,105 @@
 let geographyQuestions = [
     {
         question: 'Which country has the largest landmass in the world?',
-        a: 'Russia',
-        b: 'China',
-        c: 'Canada',
-        d: 'United States of America',
         answers: ['Russia', 'China', 'Canada', 'United States of America'],
         correctAnswer: 'Russia'
     },
     {
-        question: 'Question number 2 (index 1)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'b'
+        question: 'Which is the largest country in South America?',
+        answers: ['Columbia', 'Brazil', 'Argentina', 'Peru'],
+        correctAnswer: 'Brazil'
     },
     {
-        question: 'Question number 3 (index 2)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'c'
+        question: 'Which city is the capital of Australia?',
+        answers: ['Melbourne', 'Perth', 'Sydney', 'Canberra'],
+        correctAnswer: 'Sydney'
     },
     {
-        question: 'Question number 4 (index 3)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'd'
+        question: 'Which is the largest city in the world based on surface area?',
+        answers: ['Hulunbuir', 'Mumbai', 'Shanghai', 'New York'],
+        correctAnswer: 'Hulunbuir'
     },
     {
-        question: 'Question number 5 (index 4)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'a'
+        question: 'Which river runs through Paris?',
+        answers: ['Danube', 'Elbe', 'Thames', 'Seine'],
+        correctAnswer: 'Seine'
     },
     {
-        question: 'Question number 6 (index 5)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'b'
+        question: 'In which country is the region of Transilvania located?',
+        answers: ['Croatia', 'Moldavia', 'Romania', 'Albania'],
+        correctAnswer: 'Romania'
     },
     {
-        question: 'Question number 7 (index 6)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'c'
+        question: 'Which country is NOT part of the Scaninavian Peninsula?',
+        answers: ['Finlad', 'Denmark', 'Sweden', 'Norway'],
+        correctAnswer: 'Denmark'
     },
     {
-        question: 'Question number 8 (index 7)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'd'
+        question: 'In which body of water is the Isle of Man located?',
+        answers: ['The Irish Sea', 'The North Sea', 'The Atlantic Ocean', 'The English Channel'],
+        correctAnswer: 'The Irish Sea'
     },
     {
-        question: 'Question number 9 (index 8)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'a'
+        question: 'Which is Earth\'s largest continent?',
+        answers: ['Asia', 'Africa', 'Australia', 'Antarctica'],
+        correctAnswer: 'Asia'
     },
     {
-        question: 'Question number 10 (index 9)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'b'
+        question: 'What percentage of the River Nile is located in Egypt?',
+        answers: ['9%', '86%', '22%', '100%'],
+        correctAnswer: '22%'
     },
 ]
 
 let scienceQuestions = [
     {
         question: 'Question number 1 (index 0)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: 'd'
     },
     {
         question: 'Question number 2 (index 1)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 3 (index 2)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 4 (index 3)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 5 (index 4)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 6 (index 5)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 7 (index 6)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 8 (index 7)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 9 (index 8)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 10 (index 9)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
 ]
@@ -182,82 +112,52 @@ let scienceQuestions = [
 let musicQuestions = [
     {
         question: 'Question number 1 (index 0)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: 'd'
     },
     {
         question: 'Question number 2 (index 1)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 3 (index 2)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 4 (index 3)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 5 (index 4)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 6 (index 5)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 7 (index 6)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 8 (index 7)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 9 (index 8)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 10 (index 9)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
 ]
@@ -265,82 +165,52 @@ let musicQuestions = [
 let animalsQuestions = [
     {
         question: 'Question number 1 (index 0)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: 'd'
     },
     {
         question: 'Question number 2 (index 1)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 3 (index 2)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 4 (index 3)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 5 (index 4)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 6 (index 5)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 7 (index 6)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 8 (index 7)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 9 (index 8)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
     {
         question: 'Question number 10 (index 9)',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
+        answers: ['a', 'b', 'c', 'd'],
         correctAnswer: ''
     },
 ]
