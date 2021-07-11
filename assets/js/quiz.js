@@ -1,5 +1,7 @@
 // quiz variables
 let currentCategory
+let geographyQuestionIndex = 0;
+let timesAnswerChecked = 0;
 let options = document.getElementsByClassName('answer-option');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -164,17 +166,29 @@ let score = document.getElementById('score')
 // let didUserSelectAnswer = userAnswer();
 
 
-let timesAnswerChecked = 0
+let categoryIndex = `${currentCategory}QuestionIndex`
+/**this function logs the variables timesAnswerChecked and geographyQuestionIndex, there's a bug 
+ * which causes them to not match even if they should.
+ */
+ function logVars(){
+    console.log(`timesAnswerChecked = ${timesAnswerChecked}`)
+    console.log(`geographyQuestionIndex = ${geographyQuestionIndex}`)
+    console.log(`categoryIndex = ${categoryIndex}`)
+    console.log(`currenCategory = ${currentCategory}`)
+}
+
+let showVars = logVars()
+
 /**
  * increments the innertext of the score span by 10 
  */
 function incrementScore() {
-    let categoryIndex = `${currentCategory}QuestionIndex`
-    if (timesAnswerChecked != categoryIndex) {
+    //note to future self: this function is not working
+    if (timesAnswerChecked == geographyQuestionIndex) {
+        score.innerText = parseInt(score.innerText) + 10
+    } else {
         alert(`Nice try! You can't submit the same answer twice :)`);
         timesAnswerChecked--;
-    } else {
-        score.innerText = parseInt(score.innerText) + 10
     }
 }
 
@@ -201,7 +215,7 @@ function gameOver() {
     }
 }
 
-let geographyQuestionIndex = 0;
+
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
 
