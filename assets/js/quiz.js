@@ -79,7 +79,33 @@ function shuffleQuestions() {
     })
 }
 
+/**returns the question array that corresponds to the current category: geography,
+ * science, music or animals.
+ */
+function returnQuestionArrayName(){
+    if (currentCategory == 'geography'){
+        return geographyQuestions;
+    } else if (currentCategory == 'science'){
+        return scienceQuestions;
+    } else if(currentCategory == 'music'){
+        return musicQuestions;
+    } else if(currentCategory == 'animals'){
+        return animalsQuestions;
+    }
+}
 
+/**returns the variable *QuestionIndex based on which category the game is currently running */
+function returnQuestionArrayIndex(){
+    if (currentCategory == 'geography'){
+        return geographyQuestionIndex;
+    } else if (currentCategory == 'science'){
+        return scienceQuestionIndex;
+    } else if(currentCategory == 'music'){
+        return musicQuestionIndex;
+    } else if(currentCategory == 'animals'){
+        return animalsQuestionIndex;
+    }
+}
 /**
  * Compares the id of the radio button selected by the user to the 'for'
  * attribute of its label. Then it compares the innerText of the label
@@ -91,7 +117,11 @@ function shuffleQuestions() {
 function checkAnswer() {
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
-    let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
+    let questionArray = returnQuestionArrayName();
+    let questionArrayIndex = returnQuestionArrayIndex();
+
+    let correctAnswer = questionArray[questionArrayIndex - 1].correctAnswer;
+    // let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
     timesAnswerChecked++
 
     // ** returns the radio button that the user has selected*/
@@ -165,16 +195,10 @@ let score = document.getElementById('score')
 function incrementScore() {
     //note to future self: this function is not working
     if (timesAnswerChecked == geographyQuestionIndex) {
-        console.log(`timesAnswerChecked before false if option = ${timesAnswerChecked}`)
-        console.log(`geographyQuestionIndex before falsee if option = ${geographyQuestionIndex}`)
         score.innerText = parseInt(score.innerText) + 10
     } else {
         alert(`Nice try! You can't submit the same answer twice :)`);
-        console.log(`timesAnswerChecked after false if option alert= ${timesAnswerChecked}`)
-        console.log(`geographyQuestionIndex after false if option alert = ${geographyQuestionIndex}`)
         timesAnswerChecked--;
-        console.log(`timesAnswerChecked after false if option -- = ${timesAnswerChecked}`)
-        console.log(`geographyQuestionIndex after false if option -- = ${geographyQuestionIndex}`)
     }
 }
 
