@@ -1,6 +1,9 @@
 // quiz variables
 let currentCategory
 let geographyQuestionIndex = 0;
+let scienceQuestionIndex = 0;
+let musicQuestionIndex = 0;
+let animalsQuestionIndex = 0;
 let timesAnswerChecked = 0;
 let options = document.getElementsByClassName('answer-option');
 
@@ -132,12 +135,6 @@ function checkAnswer() {
             }
         }
     }
-
-    // tests to see if the functions work properly
-    // console.log(`the answerlabels are ${answerLabels}`)
-    // console.log(`the selected label is ${selectedLabel.innerText}`)
-    // console.log(`the selected radio id is ${selectedRadioID}`)
-    // console.log(`the correct answer is ${correctAnswer}`)
 }
 
 function goToNextQuestion() {
@@ -161,20 +158,6 @@ let score = document.getElementById('score')
 // }
 
 // let didUserSelectAnswer = userAnswer();
-
-
-let categoryIndex = `${currentCategory}QuestionIndex`
-/**this function logs the variables timesAnswerChecked and geographyQuestionIndex, there's a bug 
- * which causes them to not match even if they should.
- */
- function logVars(){
-    console.log(`timesAnswerChecked = ${timesAnswerChecked}`)
-    console.log(`geographyQuestionIndex = ${geographyQuestionIndex}`)
-    console.log(`categoryIndex = ${categoryIndex}`)
-    console.log(`currenCategory = ${currentCategory}`)
-}
-
-let showVars = logVars()
 
 /**
  * increments the innertext of the score span by 10 
@@ -233,25 +216,53 @@ function displayGeographyQuestion() {
         }
         geographyQuestionIndex++;
     } else {
-        alert('There are no more geography questions!')
+        alert('You have made it through the geography Quiz!')
     }
 }
 
-let scienceQuestionIndex = 0
+
 
 function displayScienceQuestion() {
-    alert('You clicked on the science button')
+    if (scienceQuestionIndex < 10) {
+        question.innerText = scienceQuestions[scienceQuestionIndex].question;
+        let a = 0;
+        for (answerOption of answerOptions) {
+            answerOption.innerText = scienceQuestions[scienceQuestionIndex].answers[a];
+            a++;
+        }
+        scienceQuestionIndex++;
+    } else {
+        alert('You have made it through the Science Quiz!')
+    }
 }
-
-let musicQuestionIndex = 0
 
 function displayMusicQuestion() {
-    alert('You clicked on the music button')
+    if (musicQuestionIndex < 10) {
+        question.innerText = musicQuestions[musicQuestionIndex].question;
+        let a = 0;
+        for (answerOption of answerOptions) {
+            answerOption.innerText = musicQuestions[musicQuestionIndex].answers[a];
+            a++;
+        }
+        musicQuestionIndex++;
+    } else {
+        alert('You have made it through the Music Quiz!')
+    }
 }
 
-let animalsQuestionIndex = 0
+
 
 function displayAnimalsQuestion() {
-    alert('You clicked on the animals button')
+    if (animalsQuestionIndex < 10) {
+        question.innerText = animalsQuestions[animalsQuestionIndex].question;
+        let a = 0;
+        for (answerOption of answerOptions) {
+            answerOption.innerText = animalsQuestions[animalsQuestionIndex].answers[a];
+            a++;
+        }
+        geographyQuestionIndex++;
+    } else {
+        alert('You have made it through the geography Quiz!')
+    }
 }
 
