@@ -119,13 +119,11 @@ function checkAnswer() {
     if (selectedLabel.innerText === correctAnswer) {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
-        alert(`That's correct!`)
     } else {
         diminishLifePoints()
         if (lifePoints.innerText == 0) {
             gameOver()
         } else {
-            alert(`Oh no! Your answer is ${selectedLabel.innerText}, but the correct answer was ${correctAnswer}`);
             selectedLabel.style.backgroundColor = 'red'
             for (aL of answerLabels) {
                 if (aL.innerText === correctAnswer) {
@@ -134,8 +132,6 @@ function checkAnswer() {
             }
         }
     }
-
-    
 
     // tests to see if the functions work properly
     // console.log(`the answerlabels are ${answerLabels}`)
