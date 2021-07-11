@@ -89,6 +89,7 @@ function checkAnswer() {
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
     let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
+    timesAnswerChecked++
 
     // ** returns the radio button that the user has selected*/
     function getSelectedAnswerRadio() {
@@ -134,7 +135,7 @@ function checkAnswer() {
         }
     }
 
-    timesAnswerChecked++
+    
 
     // tests to see if the functions work properly
     // console.log(`the answerlabels are ${answerLabels}`)
@@ -185,10 +186,16 @@ let showVars = logVars()
 function incrementScore() {
     //note to future self: this function is not working
     if (timesAnswerChecked == geographyQuestionIndex) {
+        console.log(`timesAnswerChecked before false if option = ${timesAnswerChecked}`)
+        console.log(`geographyQuestionIndex before falsee if option = ${geographyQuestionIndex}`)
         score.innerText = parseInt(score.innerText) + 10
     } else {
         alert(`Nice try! You can't submit the same answer twice :)`);
+        console.log(`timesAnswerChecked after false if option alert= ${timesAnswerChecked}`)
+        console.log(`geographyQuestionIndex after false if option alert = ${geographyQuestionIndex}`)
         timesAnswerChecked--;
+        console.log(`timesAnswerChecked after false if option -- = ${timesAnswerChecked}`)
+        console.log(`geographyQuestionIndex after false if option -- = ${geographyQuestionIndex}`)
     }
 }
 
