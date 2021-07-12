@@ -124,7 +124,6 @@ function checkAnswer() {
 
 
     let correctAnswer = questionArray[questionArrayIndex - 1].correctAnswer;
-    // let correctAnswer = geographyQuestions[geographyQuestionIndex - 1].correctAnswer;
     timesAnswerChecked++
 
     // ** returns the radio button that the user has selected*/
@@ -150,8 +149,8 @@ function checkAnswer() {
 
     let selectedLabel = getSelectedLabel()
 
-    //*compares the innertext of the answer label selected by the user to the correct
-    /*answer, which is stored in the questions.js file */
+    /** compares the innertext of the answer label selected by the user to the correct
+    /* answer, which is stored in the questions.js file */
     if (selectedLabel.innerText === correctAnswer) {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
@@ -170,6 +169,10 @@ function checkAnswer() {
     }
 }
 
+/** turns the background of all question labels to white and then calls the runQuiz function
+ * with the current quiz category as parameter.
+ * Is called when the user clicks on the "Next Question" button.
+ */
 function goToNextQuestion() {
     let answerLabels = document.getElementsByTagName('label');
     for (aL of answerLabels) {
@@ -211,7 +214,13 @@ let lifePoints = document.getElementById('life-points');
  * diminishes the innertext of the life-points span by 1
  */
 function diminishLifePoints() {
-    lifePoints.innerText = parseInt(lifePoints.innerText) - 1;
+    let questionArrayIndex = returnQuestionArrayIndex();
+    if (timesAnswerChecked == questionArrayIndex) {
+        lifePoints.innerText = parseInt(lifePoints.innerText) - 1;
+    } else {
+        alert(`You already submitted your answer to this question!`);
+        timesAnswerChecked--;
+    }
 }
 
 function gameOver() {
@@ -247,7 +256,8 @@ function displayGeographyQuestion() {
         }
         geographyQuestionIndex++;
     } else {
-        alert('You have made it through the geography Quiz!')
+        alert('You have made it through the geography Quiz!');
+        timesAnswerChecked = 0;
     }
 }
 
