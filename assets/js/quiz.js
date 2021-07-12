@@ -232,7 +232,11 @@ function gameOver() {
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
 
-
+/**
+ * displays question and answers from the geographyQuestions array in questions.js and then
+ * adds 1 to the geographyQuestionIndex variable. if that variable reaches the length of the array,
+ * an alert will say that there are no more geography questions.
+ */
 function displayGeographyQuestion() {
     if (geographyQuestionIndex < 10) {
         question.innerText = geographyQuestions[geographyQuestionIndex].question;
@@ -247,8 +251,11 @@ function displayGeographyQuestion() {
     }
 }
 
-
-
+/**
+ * displays question and answers from the scienceQuestions array in questions.js and then
+ * adds 1 to the scienceQuestionIndex variable. if that variable reaches the length of the array,
+ * an alert will say that there are no more science questions.
+ */
 function displayScienceQuestion() {
     if (scienceQuestionIndex < 10) {
         question.innerText = scienceQuestions[scienceQuestionIndex].question;
@@ -263,6 +270,11 @@ function displayScienceQuestion() {
     }
 }
 
+/**
+ * displays question and answers from the musicQuestions array in questions.js and then
+ * adds 1 to the musicQuestionIndex variable. if that variable reaches the length of the array,
+ * an alert will say that there are no more music questions.
+ */
 function displayMusicQuestion() {
     if (musicQuestionIndex < 10) {
         question.innerText = musicQuestions[musicQuestionIndex].question;
@@ -277,8 +289,11 @@ function displayMusicQuestion() {
     }
 }
 
-
-
+/**
+ * displays question and answers from the animalsQuestions array in questions.js and then
+ * adds 1 to the animalsQuestionIndex variable. if that variable reaches the length of the array,
+ * an alert will say that there are no more animals questions.
+ */
 function displayAnimalsQuestion() {
     if (animalsQuestionIndex < 10) {
         question.innerText = animalsQuestions[animalsQuestionIndex].question;
