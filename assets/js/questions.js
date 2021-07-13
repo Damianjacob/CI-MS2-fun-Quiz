@@ -58,67 +58,67 @@ let geographyQuestions = [
 
 let scienceQuestions = [
     {
-        question: 'Question number 1 (index 0)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'd'
+        question: 'How many bones are in the human body?',
+        answers: ['154', '112', '206', '287'],
+        correctAnswer: '206'
     },
     {
-        question: 'Question number 2 (index 1)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is the hardest natural substance on Earth?',
+        answers: ['Lead', 'Diamond', 'Steel', 'Rock'],
+        correctAnswer: 'Diamond'
     },
     {
-        question: 'Question number 3 (index 2)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'At what temperature are Celsius and Fahrenheit equal?',
+        answers: ['-70', '-50', '-60', '-40'],
+        correctAnswer: '-40'
     },
     {
-        question: 'Question number 4 (index 3)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is the study of mushrooms called?',
+        answers: ['Mycology', 'Ornithology', 'Carcinology', 'Malacology'],
+        correctAnswer: 'Mycology'
     },
     {
-        question: 'Question number 5 (index 4)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which of the following planets does NOT have rings?',
+        answers: ['Saturn', 'Venus', 'Uranus', 'Neptune'],
+        correctAnswer: 'Venus'
     },
     {
-        question: 'Question number 6 (index 5)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What does USB stand for in computer science?',
+        answers: ['Universal serial bus', 'Universal signal bringer', 'Universal songo bongo', 'Universal sign barometer'],
+        correctAnswer: 'Universal serial bus'
     },
     {
-        question: 'Question number 7 (index 6)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'If you get scurvy, what vitamin are you deficient in?',
+        answers: ['Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D'],
+        correctAnswer: 'Vitamin C'
     },
     {
-        question: 'Question number 8 (index 7)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What does the word dinosaur mean?',
+        answers: ['Angry lizard', 'Monster lizard', 'Giant lizard', 'Terrible lizard'],
+        correctAnswer: 'Terrible lizard'
     },
     {
-        question: 'Question number 9 (index 8)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'How many seconds does it take for light to travel from the Earth to the Sun?',
+        answers: ['240 seconds', '500 seconds', '170 seconds', '630 seconds'],
+        correctAnswer: '500 seconds'
     },
     {
-        question: 'Question number 10 (index 9)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'How much salt does the human body contain on average?',
+        answers: ['1 Kilo', '500 grams', '250 grams', '10 grams'],
+        correctAnswer: '250 grams'
     },
 ]
 
 let musicQuestions = [
     {
-        question: 'Question number 1 (index 0)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'd'
+        question: 'Who was the first drummer of The Beatles?',
+        answers: ['Pete Best', 'Ringo Starr', 'John Bonham', 'Tom Johnson'],
+        correctAnswer: 'Pete Best'
     },
     {
-        question: 'Question number 2 (index 1)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which mathematical symbol was the title of Ed Sheeran’s first album in 2011?',
+        answers: ['-', '+', 'x', '/'],
+        correctAnswer: '+'
     },
     {
         question: 'Question number 3 (index 2)',
