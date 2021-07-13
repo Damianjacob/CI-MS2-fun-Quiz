@@ -24,10 +24,12 @@ h1 {
 #quiz-area {
     text-align: center;
     margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 0;
 }
 
 #quiz-area label{
-margin: 15px auto;
 border: 1px solid black;
 }
 
@@ -36,10 +38,9 @@ border: 1px solid black;
 }
 
 #quiz-area button{
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 #quiz-area input {
-    margin: 10px auto;
     display: none;
 }

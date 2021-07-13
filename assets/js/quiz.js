@@ -223,6 +223,7 @@ function diminishLifePoints() {
     }
 }
 
+let modal = document.getElementById('gameOverModal');
 function gameOver() {
     alert(`Game Over! Your Score is ${score.innerText}`)
     score.innerText = 0
@@ -236,6 +237,12 @@ function gameOver() {
         answer.innerText = '';
     }
 }
+
+// does not work
+// function testModal(){
+//     $('#exampleModalCenter').modal('show')
+// }
+// let modalTest = testModal()
 
 
 let question = document.getElementById('question');
@@ -276,7 +283,8 @@ function displayScienceQuestion() {
         }
         scienceQuestionIndex++;
     } else {
-        alert('You have made it through the Science Quiz!')
+        alert('You have made it through the Science Quiz!');
+        timesAnswerChecked = 0;
     }
 }
 
@@ -295,7 +303,8 @@ function displayMusicQuestion() {
         }
         musicQuestionIndex++;
     } else {
-        alert('You have made it through the Music Quiz!')
+        alert('You have made it through the Music Quiz!');
+        timesAnswerChecked = 0;
     }
 }
 
@@ -314,7 +323,8 @@ function displayAnimalsQuestion() {
         }
         geographyQuestionIndex++;
     } else {
-        alert('You have made it through the geography Quiz!')
+        alert('You have made it through the geography Quiz!');
+        timesAnswerChecked = 0;
     }
 }
 
