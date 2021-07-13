@@ -121,44 +121,44 @@ let musicQuestions = [
         correctAnswer: '+'
     },
     {
-        question: 'Question number 3 (index 2)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'According to the lyrics of Kelis\' "Milkshake", where does her milkshake bring all the boys?',
+        answers: ['To the pub', 'To the street', 'To the yard', 'To the hall'],
+        correctAnswer: 'To the yard'
     },
     {
-        question: 'Question number 4 (index 3)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is David Bowie\'s real surname?',
+        answers: ['Roberts', 'James', 'Rudolph', 'Jones'],
+        correctAnswer: 'Jones'
     },
     {
-        question: 'Question number 5 (index 4)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'How old was Mozart when he wrote his first piece?',
+        answers: ['5', '7', '13', '15'],
+        correctAnswer: '5'
     },
     {
-        question: 'Question number 6 (index 5)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Who was the most streamed artist on Spotify in 2019?',
+        answers: ['Skrillex', 'Post Malone', 'Lil Nas X', 'Billie Eilish'],
+        correctAnswer: 'Post Malone'
     },
     {
-        question: 'Question number 7 (index 6)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is Taylor Swift’s middle name?',
+        answers: ['Jennifer', 'Katherine', 'Alison', 'Beth'],
+        correctAnswer: 'Alison'
     },
     {
-        question: 'Question number 8 (index 7)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is the name of Pearl Jam\'s first album?',
+        answers: ['Ten', 'Vs.', 'Vitalogy', 'No Code'],
+        correctAnswer: 'Ten'
     },
     {
-        question: 'Question number 9 (index 8)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which band wrote the songs "The Less I Know The Better" and "Elephant"?',
+        answers: ['Cage the Elephant', 'System of a Down', 'Queens of the Stone Age', 'Tame Impala'],
+        correctAnswer: 'Tame Impala'
     },
     {
-        question: 'Question number 10 (index 9)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'When translated, what does "Karaoke" mean?',
+        answers: ['Empty orchestra', 'Sing along', 'Silent singer', 'Loud voice'],
+        correctAnswer: 'Empty orchestra'
     },
 ]
 
