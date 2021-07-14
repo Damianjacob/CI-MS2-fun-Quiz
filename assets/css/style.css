@@ -8,11 +8,16 @@
     color: black;
     background-color: aquamarine;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
 }
 
 #logo {
     color: black;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 #contact-us {
@@ -20,12 +25,16 @@
     text-decoration: none;
 }
 
+#contact-us-div {
+    margin: auto 10px auto 0;
+}
+
 
 
 /* score area */
 #score-area {
     text-align: center;
-    margin: 10px auto;
+    margin: 90px auto 10px auto;
 }
 
 /* category area */
