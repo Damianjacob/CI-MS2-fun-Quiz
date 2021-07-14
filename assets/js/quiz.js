@@ -321,7 +321,7 @@ function displayAnimalsQuestion() {
             answerOption.innerText = animalsQuestions[animalsQuestionIndex].answers[a];
             a++;
         }
-        geographyQuestionIndex++;
+        animalsQuestionIndex++;
     } else {
         alert('You have made it through the geography Quiz!');
         timesAnswerChecked = 0;
