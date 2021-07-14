@@ -37,6 +37,14 @@
     margin: 90px auto 10px auto;
 }
 
+#score {
+    color: green;
+}
+
+#life-points {
+    color: red;
+}
+
 /* category area */
 #quiz-category-area {
     text-align: center;
@@ -48,6 +56,10 @@
     row-gap: 10px;
 }
 
+#quiz-category-area button{
+    font-size: 1.5em;
+}
+
 /* quiz area */
 #quiz-area {
     text-align: center;
@@ -55,10 +67,14 @@
     display: grid;
     grid-template-columns: auto;
     row-gap: 0;
+    background-color: rgba(250, 190, 88, .5) ;
 }
 
 #quiz-area label{
-border: 1px solid black;
+    border: 1px solid black;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #quiz-area label:hover{
@@ -67,6 +83,7 @@ border: 1px solid black;
 
 #quiz-area button{
     margin: 5px auto;
+
 }
 
 #quiz-area input {
