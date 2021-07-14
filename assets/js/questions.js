@@ -164,29 +164,29 @@ let musicQuestions = [
 
 let animalsQuestions = [
     {
-        question: 'Question number 1 (index 0)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: 'd'
+        question: 'For how long can a snail sleep?',
+        answers: ['Up to 3 years', 'Up to 6 months', 'Up to 4 weeks', 'Up to 5 days'],
+        correctAnswer: 'Up to 3 years'
     },
     {
-        question: 'Question number 2 (index 1)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What is a group of lions called?',
+        answers: ['A murder', 'A herd', 'A flock', 'A Pride'],
+        correctAnswer: 'A Pride'
     },
     {
-        question: 'Question number 3 (index 2)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which is the largest mammal on earth?',
+        answers: ['Elephant', 'Blue Whale', 'Rhino', 'Sperm Whale'],
+        correctAnswer: 'Blue Whale'
     },
     {
-        question: 'Question number 4 (index 3)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which animal has the strongest bite?',
+        answers: ['Hyena', 'Shark', 'Saltwater crocodile', 'Bulldog'],
+        correctAnswer: 'Saltwater crocodile'
     },
     {
-        question: 'Question number 5 (index 4)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'how many hearts does an octopus have?',
+        answers: ['1', '2', '3', '4'],
+        correctAnswer: '3'
     },
     {
         question: 'Question number 6 (index 5)',
