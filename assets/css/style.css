@@ -103,14 +103,18 @@ body{
     top: 40%;
     left: 0;
     height: 40%;
-    background-color: rgba(10, 3, 3, 0.8);
+    background-color: rgba(10, 3, 3, 0.9);
     color: white;
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 
 #game-over-div h2{
     color: red;
+}
+
+#score2{
+    color: green;
 }
 
 

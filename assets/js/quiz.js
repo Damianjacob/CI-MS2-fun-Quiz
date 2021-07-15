@@ -191,7 +191,6 @@ function incrementScore() {
     let questionArrayIndex = returnQuestionArrayIndex();
     if (timesAnswerChecked == questionArrayIndex) {
         score.innerText = parseInt(score.innerText) + 10;
-        score2.innerText = score.innerText;
     } else {
         alert(`Nice try! You can't submit the same answer twice :)`);
         timesAnswerChecked--;
@@ -213,7 +212,7 @@ function diminishLifePoints() {
     }
 }
 
-let modal = document.getElementById('gameOverModal');
+let gameOverMsg = document.getElementById('game-over-div');
 function gameOver() {
     alert(`Game Over! Your Score is ${score.innerText}`)
     score.innerText = 0
@@ -223,17 +222,15 @@ function gameOver() {
     musicQuestionIndex = 0
     animalsQuestionIndex = 0
     question.innerText = ''
+    gameOverMsg.style.display = 'block'
     for (answer of answerOptions) {
         answer.innerText = '';
     }
 }
 
-// does not work
-// function testModal(){
-//     $('#exampleModalCenter').modal('show')
-// }
-// let modalTest = testModal()
-
+gameOverMsg.addEventListener('click', function(){
+    this.style.display = 'none';
+})
 
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
