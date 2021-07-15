@@ -154,6 +154,9 @@ function checkAnswer() {
     if (selectedLabel.innerText === correctAnswer) {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
+        if (geographyQuestionIndex + scienceQuestionIndex + musicQuestionIndex + animalsQuestionIndex == 40){
+            wonTheGame()
+        }
     } else {
         diminishLifePoints()
         if (lifePoints.innerText == 0) {
@@ -232,6 +235,15 @@ for (msg of popUpMsgs){
     msg.addEventListener('click', function(){
         this.style.display = 'none'
     })
+}
+
+let winnerMsg = document.getElementById('win-msg');
+/**displays the winner message */
+function wonTheGame(){
+    for (msg of popUpMsgs){
+        msg.style.display = 'none'
+    }
+    winnerMsg.style.display = 'block'
 }
 
 let question = document.getElementById('question');
