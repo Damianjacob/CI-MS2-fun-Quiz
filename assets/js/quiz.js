@@ -74,7 +74,7 @@ function shuffleQuestions() {
         return 0.5 - Math.random();
     })
 
-    geographyQuestions.sort(function shuffle(a, b) {
+    animalsQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
     })
 }
