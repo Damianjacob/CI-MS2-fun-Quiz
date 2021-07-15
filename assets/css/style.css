@@ -98,7 +98,11 @@ body{
 }
 
 /* game over div */
-#game-over-div {
+#game-over-div h2{
+    color: red;
+}
+
+.pop-up-msgs {
     position: absolute;
     top: 40%;
     left: 0;
@@ -109,9 +113,14 @@ body{
     display: none;
 }
 
-#game-over-div h2{
-    color: red;
+#geography-done h2, #science-done h2, #music-done h2, #animals-done h2 {
+    color: green;
 }
+
+#win-msg h2{
+    color: orange;
+}
+
 
 #score2{
     color: green;

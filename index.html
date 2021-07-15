@@ -25,6 +25,7 @@
         <p>Score: <span id='score' class='score'>0</span></p>
         <p>Life Points: <span id=life-points>5</span></p>
     </div>
+
     <!-- quiz categories -->
     <div id='quiz-category-area'>
         <button data-button-type='geography'>Geography</button>
@@ -32,6 +33,7 @@
         <button data-button-type='music'>Music</button>
         <button data-button-type='animals'>Animals</button>
     </div>
+
     <!-- quiz area -->
     <div id='quiz-area'>
         <h2 id='question'>Click on one of the four categories above to start!</h2>
@@ -51,10 +53,35 @@
         <button data-button-type='next'>Next Question</button>
     </div>
 
-    <div id='game-over-div'>
+    <div id='game-over-div' class='pop-up-msgs'>
         <h2>Game Over!</h2>
         <p>Oh no, you're all out of life points! Your final score is <span class='score' id='score2'>0</span></p>
         <p>To go back and start a new round, click anywhere on this message!</p>
+    </div>
+
+    <div id='geography-done' class='pop-up-msgs'>
+        <h2>Well done! You made it through the geography quiz!</h2>
+        <p>Click anywhere on this message to close it and continue with another category!</p>
+    </div>
+
+    <div id='science-done' class='pop-up-msgs'>
+        <h2>Well done! You made it through the science quiz!</h2>
+        <p>Click anywhere on this message to close it and continue with another category!</p>
+    </div>
+
+    <div id='music-done' class='pop-up-msgs'>
+        <h2>Well done! You made it through the music quiz!</h2>
+        <p>Click anywhere on this message to closel it and continue with another category!</p>
+    </div>
+
+    <div id='animals-done' class='pop-up-msgs'>
+        <h2>Well done! You made it through the animals quiz!</h2>
+        <p>Click anywhere on this message to closel it and continue with another category!</p>
+    </div>
+
+    <div id='win-msg' class='pop-up-msgs'>
+        <h2>Wow! You mastered all four categories, Congrats!</h2>
+        <p>Your final score is <span id='final-score'></span></p>
     </div>
 
     <!-- Javascript files for questions and quiz -->

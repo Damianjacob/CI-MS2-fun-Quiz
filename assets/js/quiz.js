@@ -214,23 +214,25 @@ function diminishLifePoints() {
 
 let gameOverMsg = document.getElementById('game-over-div');
 function gameOver() {
-    alert(`Game Over! Your Score is ${score.innerText}`)
     score.innerText = 0
     lifePoints.innerText = 5
     geographyQuestionIndex = 0
     scienceQuestionIndex = 0
     musicQuestionIndex = 0
     animalsQuestionIndex = 0
-    question.innerText = ''
+    question.innerText = 'Select a category to start a new round!'
     gameOverMsg.style.display = 'block'
     for (answer of answerOptions) {
         answer.innerText = '';
     }
 }
 
-gameOverMsg.addEventListener('click', function(){
-    this.style.display = 'none';
-})
+let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
+for (msg of popUpMsgs){
+    msg.addEventListener('click', function(){
+        this.style.display = 'none'
+    })
+}
 
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
@@ -255,6 +257,7 @@ function displayGeographyQuestion() {
     }
 }
 
+let scienceWinDiv = document.getElementById('science-done')
 /**
  * displays question and answers from the scienceQuestions array in questions.js and then
  * adds 1 to the scienceQuestionIndex variable. if that variable reaches the length of the array,
