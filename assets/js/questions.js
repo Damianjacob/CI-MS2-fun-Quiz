@@ -189,29 +189,29 @@ let animalsQuestions = [
         correctAnswer: '3'
     },
     {
-        question: 'Question number 6 (index 5)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Where is a shrimp\'s heart located?',
+        answers: ['In its head', 'In its tail', 'In its stomach', 'In one of its legs'],
+        correctAnswer: 'In its head'
     },
     {
-        question: 'Question number 7 (index 6)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which animal has the highest blood pressure?',
+        answers: ['Hippo', 'Giraffe', 'Hummingbird', 'Elephant'],
+        correctAnswer: 'Giraffe'
     },
     {
-        question: 'Question number 8 (index 7)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'Which animal does NOT have eyelids?',
+        answers: ['Duck', 'Crocodile', 'Snake', 'Lemming'],
+        correctAnswer: 'Snake'
     },
     {
-        question: 'Question number 9 (index 8)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'The Gombe war was a violent conflict between two groups of which animal?',
+        answers: ['Chimpanzees', 'Lions', 'Hyenas', 'Gorillas'],
+        correctAnswer: 'Chimpanzees'
     },
     {
-        question: 'Question number 10 (index 9)',
-        answers: ['a', 'b', 'c', 'd'],
-        correctAnswer: ''
+        question: 'What color is a Polar Bear\'s skin?',
+        answers: ['Pink', 'White', 'Yellow', 'Black'],
+        correctAnswer: 'Black'
     },
 ]
 
