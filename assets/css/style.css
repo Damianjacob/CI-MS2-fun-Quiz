@@ -29,6 +29,10 @@
     margin: auto 10px auto 0;
 }
 
+.active {
+    border-bottom: black solid 1px;
+}
+
 
 
 /* score area */
@@ -88,4 +92,10 @@
 
 #quiz-area input {
     display: none;
+}
+
+
+/* How to play page */
+#instructions-area {
+    margin-top: 90px;
 }
