@@ -155,7 +155,7 @@ function checkAnswer() {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
         if (geographyQuestionIndex + scienceQuestionIndex + musicQuestionIndex + animalsQuestionIndex == 40){
-            wonTheGame()
+            wonTheGame();
         }
     } else {
         diminishLifePoints()
@@ -186,6 +186,7 @@ function goToNextQuestion() {
 
 let score = document.getElementById('score')
 let score2 = document.getElementById('score2')
+let finalScore = document.getElementById('final-score')
 
 /**
  * increments the innertext of the score span by 10 
@@ -240,6 +241,7 @@ for (msg of popUpMsgs){
 let winnerMsg = document.getElementById('win-msg');
 /**displays the winner message */
 function wonTheGame(){
+    finalScore.innerText = score.innerText; 
     for (msg of popUpMsgs){
         msg.style.display = 'none'
     }
