@@ -106,7 +106,7 @@ body{
     background-color: rgba(10, 3, 3, 0.8);
     color: white;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 
 #game-over-div h2{

@@ -182,18 +182,7 @@ function goToNextQuestion() {
 }
 
 let score = document.getElementById('score')
-
-/**checks whether the user has selected any answer and whether they have submitted it */
-// function userAnswer() {
-//     let x = 0;
-//     let answers = document.getElementsByClassName('answer-radio');
-//     console.log(answers)
-//     for (answer of answers){
-//         console.log(answer.checked)
-//     }
-// }
-
-// let didUserSelectAnswer = userAnswer();
+let score2 = document.getElementById('score2')
 
 /**
  * increments the innertext of the score span by 10 
@@ -201,7 +190,8 @@ let score = document.getElementById('score')
 function incrementScore() {
     let questionArrayIndex = returnQuestionArrayIndex();
     if (timesAnswerChecked == questionArrayIndex) {
-        score.innerText = parseInt(score.innerText) + 10
+        score.innerText = parseInt(score.innerText) + 10;
+        score2.innerText = score.innerText;
     } else {
         alert(`Nice try! You can't submit the same answer twice :)`);
         timesAnswerChecked--;
