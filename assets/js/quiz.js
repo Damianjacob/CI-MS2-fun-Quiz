@@ -237,6 +237,7 @@ for (msg of popUpMsgs){
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
 
+let geographyWinDiv = document.getElementById('geography-done')
 /**
  * displays question and answers from the geographyQuestions array in questions.js and then
  * adds 1 to the geographyQuestionIndex variable. if that variable reaches the length of the array,
@@ -252,7 +253,7 @@ function displayGeographyQuestion() {
         }
         geographyQuestionIndex++;
     } else {
-        alert('You have made it through the geography Quiz!');
+        geographyWinDiv.style.display = 'block';
         timesAnswerChecked = 0;
     }
 }
@@ -273,11 +274,12 @@ function displayScienceQuestion() {
         }
         scienceQuestionIndex++;
     } else {
-        alert('You have made it through the Science Quiz!');
+        scienceWinDiv.style.display = 'block';
         timesAnswerChecked = 0;
     }
 }
 
+let musicWinDiv = document.getElementById('music-done');
 /**
  * displays question and answers from the musicQuestions array in questions.js and then
  * adds 1 to the musicQuestionIndex variable. if that variable reaches the length of the array,
@@ -293,11 +295,12 @@ function displayMusicQuestion() {
         }
         musicQuestionIndex++;
     } else {
-        alert('You have made it through the Music Quiz!');
+        musicWinDiv.style.display = 'block';
         timesAnswerChecked = 0;
     }
 }
 
+let animalsWinDiv = document.getElementById('animals-done');
 /**
  * displays question and answers from the animalsQuestions array in questions.js and then
  * adds 1 to the animalsQuestionIndex variable. if that variable reaches the length of the array,
@@ -313,7 +316,7 @@ function displayAnimalsQuestion() {
         }
         animalsQuestionIndex++;
     } else {
-        alert('You have made it through the geography Quiz!');
+        animalsWinDiv.style.display = 'block';
         timesAnswerChecked = 0;
     }
 }

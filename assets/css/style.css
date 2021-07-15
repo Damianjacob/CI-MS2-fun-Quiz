@@ -121,6 +121,9 @@ body{
     color: orange;
 }
 
+#final-score{
+    color: green;
+}
 
 #score2{
     color: green;
