@@ -3,6 +3,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(orange, brown);
 }
 
 #header {
@@ -44,7 +45,6 @@ body{
 #score-area {
     text-align: center;
     margin: 90px auto 10px auto;
-    background-image: linear-gradient(red, orange, yellow)
 }
 
 #score {
