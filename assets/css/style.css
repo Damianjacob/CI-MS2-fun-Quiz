@@ -3,8 +3,11 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    /* background-image: linear-gradient(rgb(245, 221, 169), rgb(243, 182, 92)); */
     background-image: linear-gradient(to right, #868cdf, #9845cf );
+}
+
+#page-wrapper{
+    min-height: 100vh;
 }
 
 #header {
@@ -12,8 +15,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     color: black;
-    /* background-color: #a75adb; */
     background-image: linear-gradient(to right, #868cdf, #9845cf );
     width: 100%;
     position: absolute;
@@ -31,6 +34,7 @@ button {
     color: black;
     text-decoration: none;
     margin-left: 10px;
+
 }
 
 #how-to-play {
@@ -38,7 +42,7 @@ button {
     text-decoration: none;
 }
 
-#how-to-play-div {
+#nav-links {
     margin: auto 10px auto 0;
 }
 
@@ -83,8 +87,6 @@ button {
     grid-template-columns: auto;
     row-gap: 0;
     max-width: 80%;
-    /* background-color: rgba(250, 190, 88, .5) ; */
-    /* background-color: white; */
 }
 
 #quiz-area label{
@@ -187,4 +189,95 @@ footer ul li{
     padding-top: 90px;
     min-height: 100vh;
     text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    /* header for tablets */
+    #logo{
+        font-size: 1.1em;
+    }
+
+    #nav-links{
+        font-size: 1.2em;
+    }
+
+    /* score area for tablets */
+    #score-area{
+        font-size: 1.2em;
+    }
+
+    /* quiz area for tablets */
+    #quiz-area label{
+        font-size: 1.2em;
+    }
+
+    /* footer */
+    footer{
+        height: 60px;
+    }
+
+    footer i{
+        font-size: 2.4em;
+    }
+}
+
+/* Larger tablets/desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+        /* header for tablets */
+        #logo{
+            font-size: 1.2em;
+        }
+    
+        #nav-links{
+            font-size: 1.3em;
+        }
+    
+        /* score area for tablets */
+        #score-area{
+            font-size: 1.3em;
+        }
+    
+        /* quiz area for tablets */
+        #quiz-area label{
+            font-size: 1.3em;
+        }
+
+        #quiz-area {
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 10px;
+            max-width: 80%;
+        }
+
+        #question{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .column-one{
+            grid-column-start:1;
+            grid-column-end: 2;
+        }
+
+        .column-two{
+            grid-column-start:2;
+            grid-column-end: 3;
+        }
+    
+        /* footer */
+        footer{
+            height: 60px;
+        }
+    
+        footer i{
+            font-size: 2.4em;
+        }
+}
+
+/* desktops */
+@media only screen and (min-width: 992px) {
+
 }
