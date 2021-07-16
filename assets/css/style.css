@@ -1,6 +1,8 @@
 /* Header */
 body{
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #header {
@@ -42,6 +44,7 @@ body{
 #score-area {
     text-align: center;
     margin: 90px auto 10px auto;
+    background-image: linear-gradient(red, orange, yellow)
 }
 
 #score {
@@ -97,11 +100,44 @@ body{
     display: none;
 }
 
-/* game over div */
-#game-over-div h2{
-    color: red;
+/* footer */
+footer{
+    background-color: aquamarine;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
+footer i{
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer ul li{
+    display: inline;
+    color: black;
+    text-decoration: none;
+}
+
+.fa-black {
+    color: black;
+}
+
+/* Pop-up divs. These are invisible unless a certain condition is met. */
 .pop-up-msgs {
     position: absolute;
     top: 40%;
@@ -112,6 +148,11 @@ body{
     text-align: center;
     display: none;
 }
+
+#game-over-div h2{
+    color: red;
+}
+
 
 #geography-done h2, #science-done h2, #music-done h2, #animals-done h2 {
     color: green;
