@@ -82,27 +82,27 @@ function shuffleQuestions() {
 /**returns the question array that corresponds to the current category: geography,
  * science, music or animals.
  */
-function returnQuestionArrayName(){
-    if (currentCategory == 'geography'){
+function returnQuestionArrayName() {
+    if (currentCategory == 'geography') {
         return geographyQuestions;
-    } else if (currentCategory == 'science'){
+    } else if (currentCategory == 'science') {
         return scienceQuestions;
-    } else if(currentCategory == 'music'){
+    } else if (currentCategory == 'music') {
         return musicQuestions;
-    } else if(currentCategory == 'animals'){
+    } else if (currentCategory == 'animals') {
         return animalsQuestions;
     }
 }
 
 /**returns the variable *QuestionIndex based on which category the game is currently running */
-function returnQuestionArrayIndex(){
-    if (currentCategory == 'geography'){
+function returnQuestionArrayIndex() {
+    if (currentCategory == 'geography') {
         return geographyQuestionIndex;
-    } else if (currentCategory == 'science'){
+    } else if (currentCategory == 'science') {
         return scienceQuestionIndex;
-    } else if(currentCategory == 'music'){
+    } else if (currentCategory == 'music') {
         return musicQuestionIndex;
-    } else if(currentCategory == 'animals'){
+    } else if (currentCategory == 'animals') {
         return animalsQuestionIndex;
     }
 }
@@ -154,7 +154,7 @@ function checkAnswer() {
     if (selectedLabel.innerText === correctAnswer) {
         selectedLabel.style.backgroundColor = 'green'
         incrementScore()
-        if (geographyQuestionIndex + scienceQuestionIndex + musicQuestionIndex + animalsQuestionIndex == 40){
+        if (geographyQuestionIndex + scienceQuestionIndex + musicQuestionIndex + animalsQuestionIndex == 40) {
             wonTheGame();
         }
     } else {
@@ -232,20 +232,21 @@ function gameOver() {
 }
 
 let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
-for (msg of popUpMsgs){
-    msg.addEventListener('click', function(){
+for (msg of popUpMsgs) {
+    msg.addEventListener('click', function () {
         this.style.display = 'none'
     })
 }
 
 let winnerMsg = document.getElementById('win-msg');
 /**displays the winner message */
-function wonTheGame(){
-    finalScore.innerText = score.innerText; 
-    for (msg of popUpMsgs){
+function wonTheGame() {
+    finalScore.innerText = score.innerText;
+    for (msg of popUpMsgs) {
         msg.style.display = 'none'
     }
-    winnerMsg.style.display = 'block'
+    winnerMsg.style.display = 'block';
+    question.innerText = 'Well done!';
 }
 
 let question = document.getElementById('question');
@@ -268,6 +269,7 @@ function displayGeographyQuestion() {
         geographyQuestionIndex++;
     } else {
         geographyWinDiv.style.display = 'block';
+        question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
 }
@@ -289,6 +291,7 @@ function displayScienceQuestion() {
         scienceQuestionIndex++;
     } else {
         scienceWinDiv.style.display = 'block';
+        question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
 }
@@ -310,6 +313,7 @@ function displayMusicQuestion() {
         musicQuestionIndex++;
     } else {
         musicWinDiv.style.display = 'block';
+        question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
 }
@@ -331,6 +335,7 @@ function displayAnimalsQuestion() {
         animalsQuestionIndex++;
     } else {
         animalsWinDiv.style.display = 'block';
+        question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
 }
