@@ -7,7 +7,8 @@ The goal of this project is to create an interactive website that contains a qui
 1. Have fun with an interactive game
 2. Test their knowledge
 3. Try to beat the game
-4.
+4. Follow us on social media
+5. Find instructions to the game
 ## User Stories
 1. "As a person who likes games, i expect this game to show my score and my remaining life points"
 2. "As a user who has not played many online-games before, i want to see some instructions before playing"
@@ -27,7 +28,7 @@ I wanted to create a site that looks fun but still clean.
 ## Colors
 I have chosen a linear gradient for the entire page, from left to right. The gradient goes from a dark blue to violet, which is not a drastic change. After experimenting with colors, i've decided to keep the header and footer in the same color as the rest of the page, and to separate them from the rest of tha page with a double border.
 ## Fonts
-I used Zen Dots for the logo and the lato font for the body of my page. Zen Dots is a very particular font that makes the logo stand out, but it wouldn't be very legible if the entire page was in this font. Lato is perfect for the body, as it is a well readable sans-serif font.
+I used the Arial font for my page. I wanted an easily readable sans-serif font.
 ## Structure
 The first thing that should jump to the user's attention should be the logo, that's why i i placed it in the top left corner, larger than the rest of the text and with a particular font (zen dots).  
 
