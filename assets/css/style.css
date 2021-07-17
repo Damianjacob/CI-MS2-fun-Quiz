@@ -1,4 +1,8 @@
 /* Header */
+
+html{
+    background-color: rgb(118, 118, 240);
+}
 body{
     font-family:Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -22,9 +26,10 @@ body{
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    margin: 0 auto;
     height: 80px;
     border-bottom: double 5px black;
+    max-width: 1200px;
 }
 
 button {
@@ -54,7 +59,8 @@ button {
 /* score area */
 #score-area {
     text-align: center;
-    margin: 100px auto 10px auto;
+    margin: 80px auto 10px auto;
+    padding-top: 20px;
 }
 
 #score {
@@ -160,6 +166,8 @@ footer ul li{
     color: white;
     text-align: center;
     display: none;
+    width: 100%;
+    max-height: 300px;
 }
 
 #game-over-div h2{
