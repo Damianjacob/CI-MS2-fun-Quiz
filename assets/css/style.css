@@ -1,9 +1,10 @@
 /* Header */
 body{
     font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-image: linear-gradient(to right, #868cdf, #9845cf );
+    max-width: 1200px;
 }
 
 #page-wrapper{
@@ -222,11 +223,36 @@ footer ul li{
     footer i{
         font-size: 2.4em;
     }
+
+    /* how to play page for tablets */
+    #instructions-area p, #instructions-area a{
+        font-size: 1.2em;
+    }
+
+    #instructions-area h2{
+        font-size: 1.2em;
+    }
+
+    #instructions-area h3{
+        font-size: 1.2em;
+    }
+
+    /* Pop-up divs. These are invisible unless a certain condition is met. */
+.pop-up-msgs {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: 40%;
+    background-color: rgba(10, 3, 3, 0.9);
+    color: white;
+    text-align: center;
+    display: none;
+}
 }
 
 /* Larger tablets/desktops */
 @media only screen and (min-width: 768px) and (max-width: 991px){
-        /* header for tablets */
+        /* header for Larger tablets/desktops */
         #logo{
             font-size: 1.2em;
         }
@@ -235,12 +261,12 @@ footer ul li{
             font-size: 1.3em;
         }
     
-        /* score area for tablets */
+        /* score area for Larger tablets/desktops */
         #score-area{
             font-size: 1.3em;
         }
     
-        /* quiz area for tablets */
+        /* quiz area for Larger tablets/desktops */
         #quiz-area label{
             font-size: 1.3em;
         }
@@ -279,7 +305,7 @@ footer ul li{
             grid-row: 3;
         }
     
-        /* footer */
+        /* footer for Larger tablets/desktops */
         footer{
             height: 60px;
         }
@@ -287,9 +313,95 @@ footer ul li{
         footer i{
             font-size: 2.4em;
         }
+
+    /* how to play page for Larger tablets/desktops */
+    #instructions-area p, #instructions-area a{
+        font-size: 1.3em;
+    }
+
+    #instructions-area h2{
+        font-size: 1.3em;
+    }
+
+    #instructions-area h3{
+        font-size: 1.3em;
+    }
 }
 
 /* desktops */
 @media only screen and (min-width: 992px) {
+        /* header for desktops */
+        #logo{
+            font-size: 1.3em;
+        }
+    
+        #nav-links{
+            font-size: 1.4em;
+        }
+    
+        /* score area for desktops */
+        #score-area{
+            font-size: 1.4em;
+        }
+    
+        /* quiz area for desktops */
+        #quiz-area label{
+            font-size: 1.4em;
+        }
 
+        #quiz-area {
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 10px;
+            max-width: 80%;
+        }
+
+        #question{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .column-one{
+            grid-column-start:1;
+            grid-column-end: 2;
+        }
+
+        .column-two{
+            grid-column-start:2;
+            grid-column-end: 3;
+        }
+
+        #answer-two{
+            grid-row:2;
+        }
+
+        #answer-three{
+            grid-row: 2;
+        }
+
+        #answer-four{
+            grid-row: 3;
+        }
+    
+        /* footer for desktops */
+        footer{
+            height: 60px;
+        }
+    
+        footer i{
+            font-size: 2.4em;
+        }
+
+    /* how to play page for Larger tablets/desktops */
+    #instructions-area p, #instructions-area a{
+        font-size: 1.4em;
+    }
+
+    #instructions-area h2{
+        font-size: 1.4em;
+    }
+
+    #instructions-area h3{
+        font-size: 1.4em;
+    }
 }
