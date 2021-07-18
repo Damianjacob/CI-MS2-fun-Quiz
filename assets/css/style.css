@@ -12,7 +12,7 @@ body{
 }
 
 #page-wrapper{
-    min-height: 100vh;
+    min-height: calc(100vh - 145px);
 }
 
 #header {
@@ -196,7 +196,7 @@ footer ul li{
 /* How to play page */
 #instructions-area {
     padding-top: 90px;
-    min-height: 100vh;
+    min-height: calc(100vh - 145px);
     text-align: center;
     max-width: 80%;
     margin: 0 auto;
