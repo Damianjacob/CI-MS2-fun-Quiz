@@ -41,15 +41,17 @@ I used balsamiq for the wireframes. The final wireframe is a bit different from 
 <!-- ADD WIREFRAME IMAGES HERE -->
 <details>
 <summary>Wireframes for mobile</summary>
-![Mobile wireframe](assets/docs/wireframes/wireframe-mobile.png)
+<img src='assets/docs/wireframes/wireframe-mobile.png' alt='mobile wireframe'>
 </details>
 
 <details>
 <summary>Wireframes for tablet</summary>
+<img src='assets/docs/wireframes/wireframe-tablet.png' alt='tablet wireframe'>
 </details>
 
 <details>
 <summary>Wireframes for desktop</summary>
+<img src='assets/docs/wireframes/wireframe-desktop.png' alt='desktop wireframe'>
 </details>
 
 
