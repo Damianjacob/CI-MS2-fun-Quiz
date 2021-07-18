@@ -1,6 +1,7 @@
 # CI-MS2-fun-Quiz
 https://damianjacob.github.io/CI-MS2-fun-Quiz/
 
+<img src='assets/docs/amiresponsive.png' alt='Am i responsive screenshot'>
 The goal of this project is to create an interactive website that contains a quiz game. The site is targeted towards people of all ages who want to have fun and test their knowledge.
 
 ## User Goals
@@ -56,36 +57,47 @@ I used balsamiq for the wireframes. The final wireframe is a bit different from 
 
 
 
-##Technologies used
-EXPLAIN
+## Technologies used
+
+I used html and css for designing the page and JavaScript for the quiz and the user interaction. For the icons i used <a href='https://fontawesome.com/'>font awesome</a>.
+
 ## Features
 ### Existing features
 <!-- ADD DROPDOWN IMAGES FOR ALL FEATURES -->
 - Nav Bar
+The nav bar is very simple and consists of the logo on the left and a link to the "how to play" page on the right side.
+<details>
+<summary>Screenshot of navbar</summary>
+<img src='assets/docs/features/navbar.png' alt='nav bar screenshot'>
+</details>
 
+- Score area
+<details>
+<summary>Screenshot of score area</summary>
+<img src='assets/docs/features/score-area.png' alt='score area screenshot'>
+</details>
 
-- Home page hero image
+- Categories
+<details>
+<summary>Screenshot of categories</summary>
+<img src='assets/docs/features/categories.png' alt='categories screenshot'>
+</details>
 
+- Quiz area
+add : select answers, wrong answers, 
+<details>
+<summary>Screenshot of quiz area</summary>
+<img src='assets/docs/features/quiz-area.png' alt='quiz area screenshot'>
+</details>
 
-- Home page description section
-   This section explains the user what exactly the shop offers. It gives precise information about what the user can expect to find at the shop or in the page.
+- Pop up messages
 
-- Opening hours and Google Maps iframe
-   This section give the user vital information: when the shop is open and a direct link to google maps. This makes it easy for the user to get directions. 
 - Footer
-   The footer contains direct links to social media sites. This encourages the user to interact with the shop through these sites. 
-- Instruments navigation bar
-   On this page, the user can scroll freely through all the available products, but the instruments navigation bar is very useful because it allows the user to jump to any category in the page. 
-   The instruments nav bar is responsive and will become vertical and move to the side on smaller screen sizes.
-  
-- Instruments grid
-   The instruments grid is an easy way for the user to see all the products offered by the music shop. 
+<details>
+<summary>Screenshot of footer</summary>
+<img src='assets/docs/features/quiz-area.png' alt='footer screenshot'>
+</details>
 
-- About Us page
-   This page contains a brief description of the store and provides a bit of a backstory to it. This can create a stronger connection between the user and the store. 
-
-- Contact us page
-   This page contains all the necessary information for the user to contact the store, it also has a form for any user question or communication. 
 
 ## Testing
 
