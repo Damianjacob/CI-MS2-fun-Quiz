@@ -1,7 +1,7 @@
 /* Header */
 
 html{
-    background-color: rgb(118, 118, 240);
+    background-color: white;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +12,7 @@ body{
 }
 
 #page-wrapper{
-    min-height: calc(100vh - 145px);
+    min-height: calc(100vh - 125px);
 }
 
 #header {
@@ -204,6 +204,11 @@ footer ul li{
 
 /* Tablets */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+    /* page wrapper for tablets */
+    #page-wrapper{
+        min-height: calc(100vh - 145px);
+    }
+
     /* header for tablets */
     #logo{
         font-size: 1.1em;
@@ -260,6 +265,11 @@ footer ul li{
 
 /* Larger tablets/desktops */
 @media only screen and (min-width: 768px) and (max-width: 991px){
+        /* page wrapper for Larger tablets/desktops */
+        #page-wrapper{
+            min-height: calc(100vh - 145px);
+        }
+
         /* header for Larger tablets/desktops */
         #logo{
             font-size: 1.2em;
@@ -338,6 +348,11 @@ footer ul li{
 
 /* desktops */
 @media only screen and (min-width: 992px) {
+        /* page wrapper for desktops */
+        #page-wrapper{
+            min-height: calc(100vh - 145px);
+        }
+
         /* header for desktops */
         #logo{
             font-size: 1.3em;
