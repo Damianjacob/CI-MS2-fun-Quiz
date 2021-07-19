@@ -36,15 +36,15 @@ function hideCategories() {
         sButton.style.visibility = 'hidden';
         mButton.style.visibility = 'hidden';
         aButton.style.visibility = 'hidden';
-    } else if (currentCategory == 'science'){
+    } else if (currentCategory == 'science') {
         gButton.style.visibility = 'hidden';
         mButton.style.visibility = 'hidden';
         aButton.style.visibility = 'hidden';
-    } else if (currentCategory == 'music'){
+    } else if (currentCategory == 'music') {
         gButton.style.visibility = 'hidden';
         sButton.style.visibility = 'hidden';
         aButton.style.visibility = 'hidden';
-    } else if (currentCategory == 'animals'){
+    } else if (currentCategory == 'animals') {
         gButton.style.visibility = 'hidden';
         sButton.style.visibility = 'hidden';
         mButton.style.visibility = 'hidden';
@@ -54,9 +54,9 @@ function hideCategories() {
 }
 
 /**unhides all the category buttons */
-function unhideCategories(){
+function unhideCategories() {
     let categoryButtons = document.getElementsByClassName('category-button');
-    for (btn of categoryButtons){
+    for (btn of categoryButtons) {
         btn.style.visibility = 'visible';
     }
 }
@@ -143,7 +143,7 @@ function returnQuestionArrayIndex() {
     }
 }
 
-
+// var questionAnswered
 /**
  * Compares the id of the radio button selected by the user to the 'for'
  * attribute of its label. Then it compares the innerText of the label
@@ -151,16 +151,22 @@ function returnQuestionArrayIndex() {
  * if the user selected the correct answer, this function will set the background color
  * of that answer label to green, otherwise it will set the background color of
  * the answer label selected by the user to red and the correct answer to green.
+ * Sets the 'answered' value to 'n' for the current question.
  */
 function checkAnswer() {
     let questionArray = returnQuestionArrayName();
     let questionArrayIndex = returnQuestionArrayIndex();
+    // var questionAnswered = questionArray[questionArrayIndex - 1].answered;
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
 
+    // questionArray[questionArrayIndex - 1].answered = 'y';
 
     let correctAnswer = questionArray[questionArrayIndex - 1].correctAnswer;
-    timesAnswerChecked++
+    // console.log(questionAnswered);
+    timesAnswerChecked++;
+
+
 
     // ** returns the radio button that the user has selected*/
     function getSelectedAnswerRadio() {
@@ -208,16 +214,22 @@ function checkAnswer() {
     }
 }
 
-/** turns the background of all question labels to white and then calls the runQuiz function
- * with the current quiz category as parameter.
+/** If the user has answered the current question, returns the background of all question labels to white and then calls the runQuiz function
+ * with the current quiz category as parameter. Otherwise, alerts the user that they need to answer the question first.
  * Is called when the user clicks on the "Next Question" button.
  */
-function goToNextQuestion() {
-    let answerLabels = document.getElementsByTagName('label');
+function goToNextQuestion() {  
+    let questionArrayIndex = returnQuestionArrayIndex();
+
+    if (questionArrayIndex - 1 != timesAnswerChecked){
+        let answerLabels = document.getElementsByTagName('label');
     for (aL of answerLabels) {
         aL.style.backgroundColor = 'white'
     }
     runQuiz(currentCategory)
+    } else {
+        alert(`You have to answer this question before you can go on to the next one!`)
+    }
 }
 
 let score = document.getElementById('score')
@@ -251,6 +263,22 @@ function diminishLifePoints() {
         timesAnswerChecked--;
     }
 }
+
+/**sets the value of 'answered' to 'n' for each question in the 4 question arrays */
+// function resetQuestionAnswered() {
+//     for (question of geographyQuestions){
+//         question.answered = 'n'
+//     }
+//     for (question of scienceQuestions){
+//         question.answered = 'n'
+//     }
+//     for (question of musicQuestions){
+//         question.answered = 'n'
+//     }
+//     for (question of animalsQuestions){
+//         question.answered = 'n'
+//     }
+// }
 
 let gameOverMsg = document.getElementById('game-over-div');
 /**displays the game over pop-up div, resets all the variables to their initial value, resets background colors and unhides all category buttons */
