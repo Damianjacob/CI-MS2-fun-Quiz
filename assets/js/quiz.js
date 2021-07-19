@@ -25,6 +25,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+/**hides the category buttons that don't correspond to the current category */
+function hideCategories() {
+    let gButton = document.getElementById('geography-button');
+    let sButton = document.getElementById('science-button');
+    let mButton = document.getElementById('music-button');
+    let aButton = document.getElementById('animals-button');
+
+    if (currentCategory == 'geography') {
+        sButton.style.visibility = 'hidden';
+        mButton.style.visibility = 'hidden';
+        aButton.style.visibility = 'hidden';
+    } else if (currentCategory == 'science'){
+        gButton.style.visibility = 'hidden';
+        mButton.style.visibility = 'hidden';
+        aButton.style.visibility = 'hidden';
+    } else if (currentCategory == 'music'){
+        gButton.style.visibility = 'hidden';
+        sButton.style.visibility = 'hidden';
+        aButton.style.visibility = 'hidden';
+    } else if (currentCategory == 'animals'){
+        gButton.style.visibility = 'hidden';
+        sButton.style.visibility = 'hidden';
+        mButton.style.visibility = 'hidden';
+    } else {
+        console.log('Error: unknown category')
+    }
+}
+
+/**unhides all the category buttons */
+function unhideCategories(){
+    let categoryButtons = document.getElementsByClassName('category-button');
+    for (btn of categoryButtons){
+        btn.style.visibility = 'visible';
+    }
+}
+
 /**
  * This adds an eventListener to each answer option in the quiz section.
  * If the user clicks on one option, first the background of all options
@@ -238,7 +274,7 @@ function gameOver() {
 let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
 for (msg of popUpMsgs) {
     msg.addEventListener('click', function () {
-        this.style.display = 'none'
+        this.style.visibility = 'hidden'
     })
 }
 
@@ -247,7 +283,7 @@ let winnerMsg = document.getElementById('win-msg');
 function wonTheGame() {
     finalScore.innerText = score.innerText;
     for (msg of popUpMsgs) {
-        msg.style.display = 'none'
+        msg.style.visibility = 'hidden'
     }
     winnerMsg.style.display = 'block';
     question.innerText = 'Well done!';
@@ -265,6 +301,7 @@ let geographyWinDiv = document.getElementById('geography-done')
 function displayGeographyQuestion() {
     if (geographyQuestionIndex < 10) {
         question.innerText = geographyQuestions[geographyQuestionIndex].question;
+        hideCategories();
         let a = 0;
         for (answerOption of answerOptions) {
             answerOption.innerText = geographyQuestions[geographyQuestionIndex].answers[a];
@@ -273,6 +310,7 @@ function displayGeographyQuestion() {
         geographyQuestionIndex++;
     } else {
         geographyWinDiv.style.display = 'block';
+        unhideCategories();
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -290,6 +328,7 @@ let scienceWinDiv = document.getElementById('science-done')
 function displayScienceQuestion() {
     if (scienceQuestionIndex < 10) {
         question.innerText = scienceQuestions[scienceQuestionIndex].question;
+        hideCategories();
         let a = 0;
         for (answerOption of answerOptions) {
             answerOption.innerText = scienceQuestions[scienceQuestionIndex].answers[a];
@@ -298,6 +337,7 @@ function displayScienceQuestion() {
         scienceQuestionIndex++;
     } else {
         scienceWinDiv.style.display = 'block';
+        unhideCategories();
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -315,6 +355,7 @@ let musicWinDiv = document.getElementById('music-done');
 function displayMusicQuestion() {
     if (musicQuestionIndex < 10) {
         question.innerText = musicQuestions[musicQuestionIndex].question;
+        hideCategories();
         let a = 0;
         for (answerOption of answerOptions) {
             answerOption.innerText = musicQuestions[musicQuestionIndex].answers[a];
@@ -323,6 +364,7 @@ function displayMusicQuestion() {
         musicQuestionIndex++;
     } else {
         musicWinDiv.style.display = 'block';
+        unhideCategories();
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -340,6 +382,7 @@ let animalsWinDiv = document.getElementById('animals-done');
 function displayAnimalsQuestion() {
     if (animalsQuestionIndex < 10) {
         question.innerText = animalsQuestions[animalsQuestionIndex].question;
+        hideCategories();
         let a = 0;
         for (answerOption of answerOptions) {
             answerOption.innerText = animalsQuestions[animalsQuestionIndex].answers[a];
@@ -348,6 +391,7 @@ function displayAnimalsQuestion() {
         animalsQuestionIndex++;
     } else {
         animalsWinDiv.style.display = 'block';
+        unhideCategories();
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
