@@ -31,23 +31,32 @@ function hideCategories() {
     let sButton = document.getElementById('science-button');
     let mButton = document.getElementById('music-button');
     let aButton = document.getElementById('animals-button');
+    let categoryTitle = document.getElementById('quiz-category-title')
 
     if (currentCategory == 'geography') {
-        sButton.style.visibility = 'hidden';
-        mButton.style.visibility = 'hidden';
-        aButton.style.visibility = 'hidden';
+        gButton.style.display = 'none';
+        sButton.style.display = 'none';
+        mButton.style.display = 'none';
+        aButton.style.display = 'none';
+        categoryTitle.innerText = 'Geography'
     } else if (currentCategory == 'science') {
-        gButton.style.visibility = 'hidden';
-        mButton.style.visibility = 'hidden';
-        aButton.style.visibility = 'hidden';
+        gButton.style.display = 'none';
+        sButton.style.display = 'none';
+        mButton.style.display = 'none';
+        aButton.style.display = 'none';
+        categoryTitle.innerText = 'Science'
     } else if (currentCategory == 'music') {
-        gButton.style.visibility = 'hidden';
-        sButton.style.visibility = 'hidden';
-        aButton.style.visibility = 'hidden';
+        gButton.style.display = 'none';
+        sButton.style.display = 'none';
+        mButton.style.display = 'none';
+        aButton.style.display = 'none';
+        categoryTitle.innerText = 'Music'
     } else if (currentCategory == 'animals') {
-        gButton.style.visibility = 'hidden';
-        sButton.style.visibility = 'hidden';
-        mButton.style.visibility = 'hidden';
+        gButton.style.display = 'none';
+        sButton.style.display = 'none';
+        mButton.style.display = 'none';
+        aButton.style.display = 'none';
+        categoryTitle.innerText = 'Animals'
     } else {
         console.log('Error: unknown category')
     }
@@ -57,7 +66,7 @@ function hideCategories() {
 function unhideCategories() {
     let categoryButtons = document.getElementsByClassName('category-button');
     for (btn of categoryButtons) {
-        btn.style.visibility = 'visible';
+        btn.style.display = 'inline-block';
     }
 }
 
@@ -143,7 +152,6 @@ function returnQuestionArrayIndex() {
     }
 }
 
-// var questionAnswered
 /**
  * Compares the id of the radio button selected by the user to the 'for'
  * attribute of its label. Then it compares the innerText of the label
@@ -160,13 +168,8 @@ function checkAnswer() {
     let answers = document.getElementsByClassName('answer-radio');
     let answerLabels = document.getElementsByTagName('label');
 
-    // questionArray[questionArrayIndex - 1].answered = 'y';
-
     let correctAnswer = questionArray[questionArrayIndex - 1].correctAnswer;
-    // console.log(questionAnswered);
     timesAnswerChecked++;
-
-
 
     // ** returns the radio button that the user has selected*/
     function getSelectedAnswerRadio() {
@@ -264,22 +267,6 @@ function diminishLifePoints() {
     }
 }
 
-/**sets the value of 'answered' to 'n' for each question in the 4 question arrays */
-// function resetQuestionAnswered() {
-//     for (question of geographyQuestions){
-//         question.answered = 'n'
-//     }
-//     for (question of scienceQuestions){
-//         question.answered = 'n'
-//     }
-//     for (question of musicQuestions){
-//         question.answered = 'n'
-//     }
-//     for (question of animalsQuestions){
-//         question.answered = 'n'
-//     }
-// }
-
 let gameOverMsg = document.getElementById('game-over-div');
 /**displays the game over pop-up div, resets all the variables to their initial value, resets background colors and unhides all category buttons */
 function gameOver() {
@@ -304,7 +291,7 @@ function gameOver() {
 let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
 for (msg of popUpMsgs) {
     msg.addEventListener('click', function () {
-        this.style.visibility = 'hidden'
+        this.style.display = 'none'
     })
 }
 
