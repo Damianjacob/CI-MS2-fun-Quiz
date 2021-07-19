@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (button.dataset.buttonType === 'confirm') {
                 checkAnswer();
             } else if (button.dataset.buttonType === 'next') {
-                goToNextQuestion()
+                goToNextQuestion();
             } else {
                 currentCategory = button.dataset.buttonType;
-                runQuiz(currentCategory)
+                runQuiz(currentCategory);
             }
         });
     }
@@ -32,41 +32,41 @@ function hideCategories() {
     let sButton = document.getElementById('science-button');
     let mButton = document.getElementById('music-button');
     let aButton = document.getElementById('animals-button');
-    
+
     categoryTitle.style.display = 'block';
-    
+
     if (currentCategory == 'geography') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Geography'
+        categoryTitle.innerText = 'Geography';
     } else if (currentCategory == 'science') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Science'
+        categoryTitle.innerText = 'Science';
     } else if (currentCategory == 'music') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Music'
+        categoryTitle.innerText = 'Music';
     } else if (currentCategory == 'animals') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Animals'
+        categoryTitle.innerText = 'Animals';
     } else {
-        console.log('Error: unknown category')
+        console.log('Error: unknown category');
     }
 }
 
 /**unhides all the category buttons */
 function unhideCategories() {
-    categoryTitle.style.display = 'none'
+    categoryTitle.style.display = 'none';
     let categoryButtons = document.getElementsByClassName('category-button');
     for (btn of categoryButtons) {
         btn.style.display = 'inline-block';
@@ -84,10 +84,10 @@ function unhideCategories() {
 for (option of options) {
     option.addEventListener('click', function () {
         for (option of options) {
-            option.style.backgroundColor = 'white'
+            option.style.backgroundColor = 'white';
         }
-        this.style.backgroundColor = 'lightBlue'
-    })
+        this.style.backgroundColor = 'lightBlue';
+    });
 }
 
 /**runs the quiz and selects one of the four categories based on which button the user clicked on */
@@ -100,8 +100,6 @@ function runQuiz(quizCategory) {
         displayMusicQuestion();
     } else if (quizCategory === 'animals') {
         displayAnimalsQuestion();
-    } else {
-        alert(`unknown category: ${quizCategory}`)
     }
 }
 
@@ -112,19 +110,19 @@ function runQuiz(quizCategory) {
 function shuffleQuestions() {
     geographyQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
-    })
+    });
 
     scienceQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
-    })
+    });
 
     musicQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
-    })
+    });
 
     animalsQuestions.sort(function shuffle(a, b) {
         return 0.5 - Math.random();
-    })
+    });
 }
 
 /**returns the question array that corresponds to the current category: geography,
@@ -178,7 +176,7 @@ function checkAnswer() {
     function getSelectedAnswerRadio() {
         for (answer of answers) {
             if (answer.checked) {
-                return answer
+                return answer;
             }
         }
     }
@@ -195,25 +193,25 @@ function checkAnswer() {
         }
     }
 
-    let selectedLabel = getSelectedLabel()
+    let selectedLabel = getSelectedLabel();
 
     /** compares the innertext of the answer label selected by the user to the correct
     /* answer, which is stored in the questions.js file */
     if (selectedLabel.innerText === correctAnswer) {
-        selectedLabel.style.backgroundColor = 'green'
-        incrementScore()
+        selectedLabel.style.backgroundColor = 'green';
+        incrementScore();
         if (geographyQuestionIndex + scienceQuestionIndex + musicQuestionIndex + animalsQuestionIndex == 40) {
             wonTheGame();
         }
     } else {
-        diminishLifePoints()
+        diminishLifePoints();
         if (lifePoints.innerText == 0) {
-            gameOver()
+            gameOver();
         } else {
-            selectedLabel.style.backgroundColor = 'red'
+            selectedLabel.style.backgroundColor = 'red';
             for (aL of answerLabels) {
                 if (aL.innerText === correctAnswer) {
-                    aL.style.backgroundColor = 'green'
+                    aL.style.backgroundColor = 'green';
                 }
             }
         }
@@ -224,23 +222,23 @@ function checkAnswer() {
  * with the current quiz category as parameter. Otherwise, alerts the user that they need to answer the question first.
  * Is called when the user clicks on the "Next Question" button.
  */
-function goToNextQuestion() {  
+function goToNextQuestion() {
     let questionArrayIndex = returnQuestionArrayIndex();
 
-    if (questionArrayIndex - 1 != timesAnswerChecked){
+    if (questionArrayIndex - 1 != timesAnswerChecked) {
         let answerLabels = document.getElementsByTagName('label');
-    for (aL of answerLabels) {
-        aL.style.backgroundColor = 'white'
-    }
-    runQuiz(currentCategory)
+        for (aL of answerLabels) {
+            aL.style.backgroundColor = 'white';
+        }
+        runQuiz(currentCategory);
     } else {
-        document.getElementById('error-msg-one').style.display = 'block'
+        document.getElementById('error-msg-one').style.display = 'block';
     }
 }
 
-let score = document.getElementById('score')
-let score2 = document.getElementById('score2')
-let finalScore = document.getElementById('final-score')
+let score = document.getElementById('score');
+let score2 = document.getElementById('score2');
+let finalScore = document.getElementById('final-score');
 
 /**
  * increments the innertext of the score span by 10 
@@ -283,7 +281,7 @@ function gameOver() {
     unhideCategories();
     categoryTitle = '';
     for (option of options) {
-        option.style.backgroundColor = 'white'
+        option.style.backgroundColor = 'white';
     }
     question.innerText = 'Select a category to start a new round!';
     gameOverMsg.style.display = 'block';
@@ -295,7 +293,7 @@ function gameOver() {
 let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
 for (msg of popUpMsgs) {
     msg.addEventListener('click', function () {
-        this.style.display = 'none'
+        this.style.display = 'none';
     })
 }
 
@@ -304,7 +302,7 @@ let winnerMsg = document.getElementById('win-msg');
 function wonTheGame() {
     finalScore.innerText = score.innerText;
     for (msg of popUpMsgs) {
-        msg.style.display = 'none'
+        msg.style.display = 'none';
     }
     winnerMsg.style.display = 'block';
     question.innerText = 'Well done!';
@@ -334,14 +332,14 @@ function displayGeographyQuestion() {
         unhideCategories();
         categoryTitle = '';
         for (option of options) {
-            option.style.backgroundColor = 'white'
+            option.style.backgroundColor = 'white';
         }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
 }
 
-let scienceWinDiv = document.getElementById('science-done')
+let scienceWinDiv = document.getElementById('science-done');
 /**
  * displays question and answers from the scienceQuestions array in questions.js and then
  * adds 1 to the scienceQuestionIndex variable. if that variable reaches the length of the array,
@@ -360,9 +358,9 @@ function displayScienceQuestion() {
     } else {
         scienceWinDiv.style.display = 'block';
         unhideCategories();
-        categoryTitle = ''
+        categoryTitle = '';
         for (option of options) {
-            option.style.backgroundColor = 'white'
+            option.style.backgroundColor = 'white';
         }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
@@ -390,7 +388,7 @@ function displayMusicQuestion() {
         unhideCategories();
         categoryTitle = '';
         for (option of options) {
-            option.style.backgroundColor = 'white'
+            option.style.backgroundColor = 'white';
         }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
@@ -418,7 +416,7 @@ function displayAnimalsQuestion() {
         unhideCategories();
         categoryTitle = '';
         for (option of options) {
-            option.style.backgroundColor = 'white'
+            option.style.backgroundColor = 'white';
         }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;

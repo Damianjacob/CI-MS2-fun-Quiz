@@ -155,15 +155,11 @@ There were no violations regarding accessibility.
 </details>
 
 ### Fixed errors
-There have been some errors which i needed to fix:
-- HTML: I assigned an alt attribute to i elements (the font awesome icons), without being aware that this should not be done.
-- CSS: I had mistakenly used the rule "background-repeat: no" for 4 different background images. This is incorrect and i changed it to "background-repeat: no-repeat".
-- Accessibility: The newsletter button had a low contrast error, so i changed its color in order to obtain a better contrast.
-- Lighthouse: the performance of my site was suffering because i had used high-resolution images with a width of around 4000px. I reduced all images with a free online resource (https://www.befunky.com/features/resize-image/) to slightly above their max-width. This allowed my performace to reach a score of over 90.
+The only error i had to fix during testing was removing the "alt" attribute from the i elements.
 
 ## Bugs
 
-The hardest bug to resolve was with the grid elements on the about-us.html and contact-us.html pages: once the viewport dropped below 800px (which is my breakpoint for tablets and mobile phones), the grid element overflowed to the right. It was very time consuming to try to figure out what the problem was, and once i discovered that it was overflowing thanks to the help of our tutor support, i tried changing the space and height rules with CSS. This still did not help, so i decided to set the display of the grid container to absolute and position it on the page. This created another bug: when reducing the height of the viewport, some of the content would overlap. I resolved this problem partially by changing the min-height from "100vh" to a set amount of px. There is still a part in my about-us page where the content overflows slightly over the background image at the very bottom (only with smaller screen sizes).
+Using JavaScript for the first time was definitely a challenge, and i had to fix many a bug by using the dev tools console. At the beginning i had forgotten that to access css rules with javascript, it's necessary to use .style before the attribute name we want to change.
 
 ## Deployment
 The site was deployed to Github pages. See the live link: https://damianjacob.github.io/CI-MS2-fun-Quiz/index.html
