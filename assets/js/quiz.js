@@ -225,6 +225,9 @@ function gameOver() {
     musicQuestionIndex = 0;
     animalsQuestionIndex = 0;
     timesAnswerChecked = 0;
+    for (option of options) {
+        option.style.backgroundColor = 'white'
+    }
     question.innerText = 'Select a category to start a new round!';
     gameOverMsg.style.display = 'block';
     for (answer of answerOptions) {
@@ -256,7 +259,7 @@ let answerOptions = document.getElementsByClassName('answer-option');
 let geographyWinDiv = document.getElementById('geography-done')
 /**
  * displays question and answers from the geographyQuestions array in questions.js and then
- * adds 1 to the geographyQuestionIndex variable. if that variable reaches the length of the array,
+ * adds 1 to the geographyQuestionIndex variable. if that variable reaches the length of the geographyQuestions array,
  * an alert will say that there are no more geography questions.
  */
 function displayGeographyQuestion() {
@@ -270,6 +273,9 @@ function displayGeographyQuestion() {
         geographyQuestionIndex++;
     } else {
         geographyWinDiv.style.display = 'block';
+        for (option of options) {
+            option.style.backgroundColor = 'white'
+        }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
@@ -292,6 +298,9 @@ function displayScienceQuestion() {
         scienceQuestionIndex++;
     } else {
         scienceWinDiv.style.display = 'block';
+        for (option of options) {
+            option.style.backgroundColor = 'white'
+        }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
@@ -314,6 +323,9 @@ function displayMusicQuestion() {
         musicQuestionIndex++;
     } else {
         musicWinDiv.style.display = 'block';
+        for (option of options) {
+            option.style.backgroundColor = 'white'
+        }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
@@ -336,6 +348,9 @@ function displayAnimalsQuestion() {
         animalsQuestionIndex++;
     } else {
         animalsWinDiv.style.display = 'block';
+        for (option of options) {
+            option.style.backgroundColor = 'white'
+        }
         question.innerText = 'Select another category to continue!';
         timesAnswerChecked = 0;
     }
