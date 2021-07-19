@@ -30,7 +30,7 @@
 See live version of site: https://damianjacob.github.io/CI-MS2-fun-Quiz/
 
 <img src='docs/amiresponsive.png' alt='Am i responsive screenshot'>
-The goal of this project is to create an interactive website that contains a quiz game. The site is targeted towards people of all ages who want to have fun and test their knowledge. 
+The goal of this project is to create an interactive  and responsive website that contains a quiz game. The site is targeted towards people of all ages who want to have fun and test their knowledge. 
 
 ## User Goals
 1. Have fun with an interactive game
@@ -47,6 +47,7 @@ The goal of this project is to create an interactive website that contains a qui
 6. "As a gamer i expect the game to tell me when i've completed a section of it"
 7. "As a user i expect to see an error message if i do something incorrectly"
 8. "As a user who has different devices, i expect the site to be responsive and to work on all my devices"
+9. "As a user, if i enter an incorrect address i want to be able to return to the homepage without using the back button"
 
 ## Site Owner Goals
 1. To have an good-looking site that incourages users to play
@@ -85,11 +86,10 @@ I used balsamiq for the wireframes. The final wireframe is a bit different from 
 <img src='docs/wireframes/wireframe-desktop.png' alt='desktop wireframe'>
 </details>
 
-
-
 ## Technologies used
 
 I used html and css for designing the page and JavaScript for the quiz and the user interaction. For the icons i used <a href='https://fontawesome.com/'>font awesome</a>.
+For creating the favicon i used https://www.favicon-generator.org/.
 
 ## Features
 ### Existing features
@@ -122,10 +122,19 @@ The quiz area is where the user sees the question and can select their answer. A
 </details>
 
 Pop up messages: 
-There are different pop-up messages: for congratulating the user, indicating that the game is over or indicating that there was an error.
+There are different pop-up messages: for congratulating the user, indicating that the game is over or indicating that there was an error. These messages validate user stories 3, 6 and 7.
 <details>
 <summary>Screenshot of error message one</summary>
 <img src='docs/features/error-msg-one.png' alt='error message screenshot'>
+</details>
+<details>
+<details>
+<summary>Screenshot of error message two</summary>
+<img src='docs/features/error-msg-two.png' alt='error message screenshot'>
+</details>
+<details>
+<summary>Screenshot of section completion message</summary>
+<img src='docs/features/category-completed.png' alt='category completed message screenshot'>
 </details>
 <details>
 <summary>Screenshot of game over message</summary>
@@ -136,11 +145,16 @@ There are different pop-up messages: for congratulating the user, indicating tha
 <img src='docs/features/winner-msg.png' alt='Winner message screenshot'>
 </details>
 
-Footer: 
-<br> The footer is simple and contains the social media links.
+Footer: The footer is simple and contains the social media links.
 <details>
 <summary>Screenshot of footer</summary>
 <img src='docs/features/quiz-area.png' alt='footer screenshot'>
+</details>
+
+404 page: This custom 404 page directs the user back to the homepage.
+<details>
+<summary>Screenshot of 404 page</summary>
+<img src='docs/features/404-page.png' alt='404 page screenshot'>
 </details>
 
 ## Testing
@@ -197,6 +211,12 @@ There were no violations regarding accessibility.
 <summary>Screenshot 2 of lighthouse test</summary>
 <img src='docs/validation/lighthouse-two.png' alt='lighthouse test screenshot'>
 </details>
+
+### Devices
+The site has been tested without issues on the following devices:
+- MacMini: Mozilla Firefox, Google Chrome, Safari
+- iPad: Safari, Google Chrome
+- iPhone 11 Pro Max: Safari, Google Chrome
 
 ### Fixed errors
 - HMTL: I deleted the alt attribute from the i elements.
