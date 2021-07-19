@@ -61,6 +61,7 @@
             <button data-button-type='next'>Next Question</button>
         </div>
 
+        <!-- pop-up divs. These are not displayed until certain certain conditions are met. -->
         <div id='game-over-div' class='pop-up-msgs'>
             <div class='msg-wrapper'>
                 <h2>Game Over!</h2>
@@ -101,6 +102,20 @@
             <div class='msg-wrapper'>
                 <h2>Wow! You mastered all four categories, Congrats!</h2>
                 <p>Your final score is <span id='final-score'></span>!</p>
+            </div>
+        </div>
+        <div id='error-msg-one' class='pop-up-msgs'>
+            <div class='msg-wrapper'>
+                <p>You have to answer this question before you can go on to the next one!</p>
+                <p>Please select an answer and then click on the "confirm selected answer" button.</p>
+                <p>Click anywhere on this message to close it.</p>
+            </div>
+        </div>
+        <div id='error-msg-two' class='pop-up-msgs'>
+            <div class='msg-wrapper'>
+                <p>You already submitted your answer to this question!</p>
+                <p>Click on the "Next question" button to go to the next question.</p>
+                <p>Click anywhere on this message to close it.</p>
             </div>
         </div>
     </div>

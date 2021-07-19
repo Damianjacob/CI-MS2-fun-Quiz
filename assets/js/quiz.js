@@ -228,7 +228,7 @@ function goToNextQuestion() {
     }
     runQuiz(currentCategory)
     } else {
-        alert(`You have to answer this question before you can go on to the next one!`)
+        document.getElementById('error-msg-one').style.display = 'block'
     }
 }
 
@@ -244,7 +244,7 @@ function incrementScore() {
     if (timesAnswerChecked == questionArrayIndex) {
         score.innerText = parseInt(score.innerText) + 10;
     } else {
-        alert(`Nice try! You can't submit the same answer twice :)`);
+        document.getElementById('error-msg-two').style.display = 'block';
         timesAnswerChecked--;
     }
 }
@@ -259,7 +259,7 @@ function diminishLifePoints() {
     if (timesAnswerChecked == questionArrayIndex) {
         lifePoints.innerText = parseInt(lifePoints.innerText) - 1;
     } else {
-        alert(`You already submitted your answer to this question!`);
+        document.getElementById('error-msg-two').style.display = 'block';
         timesAnswerChecked--;
     }
 }
