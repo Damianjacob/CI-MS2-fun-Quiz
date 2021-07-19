@@ -253,6 +253,7 @@ function diminishLifePoints() {
 }
 
 let gameOverMsg = document.getElementById('game-over-div');
+/**displays the game over pop-up div, resets all the variables to their initial value, resets background colors and unhides all category buttons */
 function gameOver() {
     score.innerText = 0;
     lifePoints.innerText = 5;
@@ -261,6 +262,7 @@ function gameOver() {
     musicQuestionIndex = 0;
     animalsQuestionIndex = 0;
     timesAnswerChecked = 0;
+    unhideCategories();
     for (option of options) {
         option.style.backgroundColor = 'white'
     }
