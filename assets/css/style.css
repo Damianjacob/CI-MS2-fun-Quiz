@@ -93,6 +93,7 @@ button {
     grid-column-start: 1;
     grid-column-end: 3;
     color:orange;
+    display: none;
 }
 
 /* quiz area */
@@ -206,7 +207,6 @@ footer ul li{
 #score2{
     color: green;
 }
-
 
 /* How to play page */
 #instructions-area {

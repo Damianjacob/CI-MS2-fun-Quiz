@@ -25,14 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+let categoryTitle = document.getElementById('quiz-category-title')
 /**hides the category buttons that don't correspond to the current category */
 function hideCategories() {
     let gButton = document.getElementById('geography-button');
     let sButton = document.getElementById('science-button');
     let mButton = document.getElementById('music-button');
     let aButton = document.getElementById('animals-button');
-    let categoryTitle = document.getElementById('quiz-category-title')
-
+    
+    categoryTitle.style.display = 'block';
+    
     if (currentCategory == 'geography') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
@@ -64,6 +66,7 @@ function hideCategories() {
 
 /**unhides all the category buttons */
 function unhideCategories() {
+    categoryTitle.style.display = 'none'
     let categoryButtons = document.getElementsByClassName('category-button');
     for (btn of categoryButtons) {
         btn.style.display = 'inline-block';
@@ -278,6 +281,7 @@ function gameOver() {
     animalsQuestionIndex = 0;
     timesAnswerChecked = 0;
     unhideCategories();
+    categoryTitle = '';
     for (option of options) {
         option.style.backgroundColor = 'white'
     }
@@ -300,7 +304,7 @@ let winnerMsg = document.getElementById('win-msg');
 function wonTheGame() {
     finalScore.innerText = score.innerText;
     for (msg of popUpMsgs) {
-        msg.style.visibility = 'hidden'
+        msg.style.display = 'none'
     }
     winnerMsg.style.display = 'block';
     question.innerText = 'Well done!';
@@ -328,6 +332,7 @@ function displayGeographyQuestion() {
     } else {
         geographyWinDiv.style.display = 'block';
         unhideCategories();
+        categoryTitle = '';
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -355,6 +360,7 @@ function displayScienceQuestion() {
     } else {
         scienceWinDiv.style.display = 'block';
         unhideCategories();
+        categoryTitle = ''
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -382,6 +388,7 @@ function displayMusicQuestion() {
     } else {
         musicWinDiv.style.display = 'block';
         unhideCategories();
+        categoryTitle = '';
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
@@ -409,6 +416,7 @@ function displayAnimalsQuestion() {
     } else {
         animalsWinDiv.style.display = 'block';
         unhideCategories();
+        categoryTitle = '';
         for (option of options) {
             option.style.backgroundColor = 'white'
         }
