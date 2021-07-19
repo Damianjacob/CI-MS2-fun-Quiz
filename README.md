@@ -155,7 +155,7 @@ There are different pop-up messages: for congratulating the user, indicating tha
 Footer: The footer is simple and contains the social media links. The social media links satisfy user storiy 4.
 <details>
 <summary>Screenshot of footer</summary>
-<img src='docs/features/quiz-area.png' alt='footer screenshot'>
+<img src='docs/features/footer.png' alt='footer screenshot'>
 </details>
 
 Instructions page:
@@ -197,11 +197,13 @@ No errors were found when passing through the official (Jigsaw) validator.
 There are 26 warnings in my quiz.js code. 
 The second error i got was for using "for of" loops instead of "for in" loops. I tried substituting them all, but my site stopped being interactive. Since it seemed to work fine on all devices and browsers for me, i left it as it was. 
 Another error I got regards functions that contain loops referring to variables declared outside of that function. I have tried to make it least confusing by declaring those variables immediately before the first function they are used in.
-<summary>Screenshot of accessibility validator</summary>
+<details>
+<summary>Screenshot of jshint validator</summary>
 <img src='docs/validation/jshint.png' alt='jshint screenshot'>
 </details>
+
 <details>
-<summary>Screenshot 2 of accessibility validator</summary>
+<summary>Screenshot 2 of jshint validator</summary>
 <img src='docs/validation/jshint-two.png' alt='jshint screenshot'>
 </details>
 
