@@ -15,8 +15,10 @@
   * [Testing](#testing)
     + [HTML](#html)
     + [CSS](#css)
+    + [JavaScript](#javascript)
     + [ACCESSIBILITY](#accessibility)
     + [LIGHTHOUSE](#lighthouse)
+    + [Devices](#devices)
     + [Fixed errors](#fixed-errors)
   * [Bugs](#bugs)
   * [Deployment](#deployment)
@@ -159,7 +161,6 @@ This page describes to the user how to play the game. It satisfies user story 2.
 <summary>Screenshot of instructions page</summary>
 <img src='docs/features/instructions-page.png' alt='instructions screenshot'>
 </details>
-
 
 404 page: This custom 404 page directs the user back to the homepage. This satisfies user story 9.
 <details>
