@@ -78,12 +78,13 @@ button {
     width: 80%;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 #quiz-category-area button{
     font-size: 1.5em;
+    border: none;
 }
 
 /* quiz area */
