@@ -131,19 +131,22 @@ There are different pop-up messages: for congratulating the user, indicating tha
 <summary>Screenshot of error message one</summary>
 <img src='docs/features/error-msg-one.png' alt='error message screenshot'>
 </details>
-<details>
+
 <details>
 <summary>Screenshot of error message two</summary>
 <img src='docs/features/error-msg-two.png' alt='error message screenshot'>
 </details>
+
 <details>
 <summary>Screenshot of section completion message</summary>
 <img src='docs/features/category-completed.png' alt='category completed message screenshot'>
 </details>
+
 <details>
 <summary>Screenshot of game over message</summary>
 <img src='docs/features/game-over-msg.png' alt='game over screenshot'>
 </details>
+
 <details>
 <summary>Screenshot of "you won the game" message</summary>
 <img src='docs/features/winner-msg.png' alt='Winner message screenshot'>
