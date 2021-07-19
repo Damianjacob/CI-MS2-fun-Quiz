@@ -219,6 +219,7 @@ There were no violations regarding accessibility.
 </details>
 
 ### LIGHTHOUSE
+The lighthouse performance test returned perfect results in all test areas.
 <details>
 <summary>Screenshot of lighthouse test</summary>
 <img src='docs/validation/lighthouse.png' alt='lighthouse test screenshot'>
@@ -261,4 +262,4 @@ The site was deployed to Github pages. See the live link: https://damianjacob.gi
    The icons have been taken from font awesome.
 
 ## Acknowledgements
-I would like to thank my co-students who took their time to answer my questions or doubts on Slack, my mentor Mo Shami who gave me precious advice and lent me his expertise and the tutors of Code Institute who are always helpful.
+I would like to thank my co-students who took their time to answer my questions or doubts on Slack, my mentor Mo Shami who gave me precious advice and lent me his expertise and the tutors of Code Institute who have saved me when i was stuck. Thank you!
