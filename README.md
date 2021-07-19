@@ -84,13 +84,26 @@ The nav bar is very simple and consists of the logo on the left and a link to th
 </details>
 
 - Quiz area
-add : select answers, wrong answers, 
+The quiz area is where the user sees the question and can select their answer. After confirming the answer, the correct answer will be highlighted in green and if the user selected an incorrect answer, that one will be highlighted in red.
 <details>
 <summary>Screenshot of quiz area</summary>
 <img src='assets/docs/features/quiz-area.png' alt='quiz area screenshot'>
 </details>
 
 - Pop up messages
+There are different pop-up messages: for congratulating the user, indicating that the game is over or indicating that there was an error.
+<details>
+<summary>Screenshot of error message</summary>
+<img src='assets/docs/features/error-msg-one.png' alt='error message screenshot'>
+</details>
+<details>
+<summary>Screenshot of game over message</summary>
+<img src='assets/docs/features/winner-msg.png' alt='game over screenshot'>
+</details>
+<details>
+<summary>Screenshot of "you won the game" message</summary>
+<img src='assets/docs/features/winner-msg.png' alt='Winner message screenshot'>
+</details>
 
 - Footer
 <details>
@@ -102,20 +115,33 @@ add : select answers, wrong answers,
 
 ### HTML
 No errors were returned when passing through the official W3C validator
+<details>
+<summary>Screenshot of html validator</summary>
+<img src='assets/docs/validation/html-index.png' alt='landing page screenshot'>
+</details>
+
+<details>
+<summary>Screenshot 2 of html validator</summary>
+<img src='assets/docs/validation/html-howtoplay.png' alt='instructions page screenshot'>
+</details>
 
 ### CSS
-No errors were found when passing through the official (Jigsaw) validator
-
+No errors were found when passing through the official (Jigsaw) validator.
+<a href='https://jigsaw.w3.org/css-validator/validator'>Go to validator</a>
+<details>
+<summary>Screenshot of CSS validator</summary>
+<img src='assets/docs/validation/css-style' alt='footer screenshot'>
+</details>
 
 ### ACCESSIBILITY
-There is one error because of an empty form label on index.html, however i need that label to stay empty for my responsive nav bar to show correctly as a hamburger menu.  The same goes for the instruments.html page in the buy modal: there are empty labels because i used icons from font awesome for those labels.
+
+
 ### LIGHTHOUSE
-All of the pages in this site have achieved a score over 90 in performance, accessibility, best practices and SEO.
-g
+
 
 ### Fixed errors
 There have been some errors which i needed to fix:
-- HTML: I had used the same id for multiple elements on the instrument page. Both were related to the modal forms: i had used id=fname and id=lname in both modals. I fixed this by renaming the elements in the buy modal and pointing their labels accordingly.
+- HTML: I assigned an alt attribute to i elements (the font awesome icons), without being aware that this should not be done.
 - CSS: I had mistakenly used the rule "background-repeat: no" for 4 different background images. This is incorrect and i changed it to "background-repeat: no-repeat".
 - Accessibility: The newsletter button had a low contrast error, so i changed its color in order to obtain a better contrast.
 - Lighthouse: the performance of my site was suffering because i had used high-resolution images with a width of around 4000px. I reduced all images with a free online resource (https://www.befunky.com/features/resize-image/) to slightly above their max-width. This allowed my performace to reach a score of over 90.
@@ -125,17 +151,16 @@ There have been some errors which i needed to fix:
 The hardest bug to resolve was with the grid elements on the about-us.html and contact-us.html pages: once the viewport dropped below 800px (which is my breakpoint for tablets and mobile phones), the grid element overflowed to the right. It was very time consuming to try to figure out what the problem was, and once i discovered that it was overflowing thanks to the help of our tutor support, i tried changing the space and height rules with CSS. This still did not help, so i decided to set the display of the grid container to absolute and position it on the page. This created another bug: when reducing the height of the viewport, some of the content would overlap. I resolved this problem partially by changing the min-height from "100vh" to a set amount of px. There is still a part in my about-us page where the content overflows slightly over the background image at the very bottom (only with smaller screen sizes).
 
 ## Deployment
-The site was deployed to Github pages. See the live link: https://damianjacob.github.io/CI_MS1_Music_Pro/index.html 
+The site was deployed to Github pages. See the live link: https://damianjacob.github.io/CI-MS2-fun-Quiz/index.html
 
 ## Credit
 
 ### Content
-   I took used the modal bootstrap from https://getbootstrap.com/ and followed the documentation from that site to modify the code of the bootstrap. I often referred back to various lessons from Code Institute and to W3schools or MDN.
-   For the responsive nav bar using only CSS i followed this tutorial by Kevin Powell: https://www.youtube.com/watch?v=8QKOaTYvYUA
+   I often referred back to various lessons from Code Institute and to W3schools or MDN.
+
 
 ### Media
-   All the photos used on the site have been downloaded from one of the following copyright-free sites: Unsplash, StockVault, Pixabay. This includes the pictures of the icons for the social media links. 
    The icons have been taken from font awesome.
 
 ## Acknowledgements
-I would like to thank my co-students who took their time to answer my questions or doubts on Slack, my mentor Mo Shami who gave me precious advice and lent me his expertise and the tutors of Code Institute who helped me understand the origin of two bugs which i then could fix.
+I would like to thank my co-students who took their time to answer my questions or doubts on Slack, my mentor Mo Shami who gave me precious advice and lent me his expertise and the tutors of Code Institute who are always helpful.
