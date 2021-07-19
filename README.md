@@ -129,7 +129,7 @@ There are different pop-up messages: for congratulating the user, indicating tha
 </details>
 <details>
 <summary>Screenshot of game over message</summary>
-<img src='assets/docs/features/winner-msg.png' alt='game over screenshot'>
+<img src='assets/docs/features/game-over-msg.png' alt='game over screenshot'>
 </details>
 <details>
 <summary>Screenshot of "you won the game" message</summary>
