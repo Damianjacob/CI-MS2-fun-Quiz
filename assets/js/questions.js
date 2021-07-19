@@ -35,8 +35,8 @@ let geographyQuestions = [
         correctAnswer: 'Romania'
     },
     {
-        question: 'Which country is NOT part of the Scaninavian Peninsula?',
-        answers: ['Finlad', 'Denmark', 'Sweden', 'Norway'],
+        question: 'Which country is NOT part of the Scandinavian Peninsula?',
+        answers: ['Finland', 'Denmark', 'Sweden', 'Norway'],
         correctAnswer: 'Denmark'
     },
     {

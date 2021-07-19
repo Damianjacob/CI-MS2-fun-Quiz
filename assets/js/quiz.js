@@ -218,14 +218,15 @@ function diminishLifePoints() {
 
 let gameOverMsg = document.getElementById('game-over-div');
 function gameOver() {
-    score.innerText = 0
-    lifePoints.innerText = 5
-    geographyQuestionIndex = 0
-    scienceQuestionIndex = 0
-    musicQuestionIndex = 0
-    animalsQuestionIndex = 0
-    question.innerText = 'Select a category to start a new round!'
-    gameOverMsg.style.display = 'block'
+    score.innerText = 0;
+    lifePoints.innerText = 5;
+    geographyQuestionIndex = 0;
+    scienceQuestionIndex = 0;
+    musicQuestionIndex = 0;
+    animalsQuestionIndex = 0;
+    timesAnswerChecked = 0;
+    question.innerText = 'Select a category to start a new round!';
+    gameOverMsg.style.display = 'block';
     for (answer of answerOptions) {
         answer.innerText = '';
     }
