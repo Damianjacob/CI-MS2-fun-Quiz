@@ -48,6 +48,7 @@ The goal of this project is to create an interactive  and responsive website tha
 7. "As a user i expect to see an error message if i do something incorrectly"
 8. "As a user who has different devices, i expect the site to be responsive and to work on all my devices"
 9. "As a user, if i enter an incorrect address i want to be able to return to the homepage without using the back button"
+10. "As a user who has many tabs open, i want to be able to recognize each site by its icon"
 
 ## Site Owner Goals
 1. To have an good-looking site that incourages users to play
@@ -90,6 +91,7 @@ I used balsamiq for the wireframes. The final wireframe is a bit different from 
 
 I used html and css for designing the page and JavaScript for the quiz and the user interaction. For the icons i used <a href='https://fontawesome.com/'>font awesome</a>.
 For creating the favicon i used https://www.favicon-generator.org/.
+The favicon satisfies user story 10.
 
 ## Features
 ### Existing features
@@ -101,7 +103,7 @@ The nav bar is very simple and consists of the logo on the left and a link to th
 </details>
 
 Score area:
-The score area is where the user can see their score and life points. The score increases when the user answers correctly and the life points decrease when the user answers incorrectly.
+The score area is where the user can see their score and life points. The score increases when the user answers correctly and the life points decrease when the user answers incorrectly. This feature satisfies user story 1.
 <details>
 <summary>Screenshot of score area</summary>
 <img src='docs/features/score-area.png' alt='score area screenshot'>
@@ -115,7 +117,7 @@ There are four quiz categories from which the user can choose. Once the user cho
 </details>
 
 Quiz area:
-The quiz area is where the user sees the question and can select their answer. After confirming the answer, the correct answer will be highlighted in green and if the user selected an incorrect answer, that one will be highlighted in red.
+The quiz area is where the user sees the question and can select their answer. After confirming the answer, the correct answer will be highlighted in green and if the user selected an incorrect answer, that one will be highlighted in red. This section satisfies user story 5.
 <details>
 <summary>Screenshot of quiz area</summary>
 <img src='docs/features/quiz-area.png' alt='quiz area screenshot'>
@@ -145,13 +147,21 @@ There are different pop-up messages: for congratulating the user, indicating tha
 <img src='docs/features/winner-msg.png' alt='Winner message screenshot'>
 </details>
 
-Footer: The footer is simple and contains the social media links.
+Footer: The footer is simple and contains the social media links. The social media links satisfy user storiy 4.
 <details>
 <summary>Screenshot of footer</summary>
 <img src='docs/features/quiz-area.png' alt='footer screenshot'>
 </details>
 
-404 page: This custom 404 page directs the user back to the homepage.
+Instructions page:
+This page describes to the user how to play the game. It satisfies user story 2.
+<details>
+<summary>Screenshot of instructions page</summary>
+<img src='docs/features/instructions-page.png' alt='instructions screenshot'>
+</details>
+
+
+404 page: This custom 404 page directs the user back to the homepage. This satisfies user story 9.
 <details>
 <summary>Screenshot of 404 page</summary>
 <img src='docs/features/404-page.png' alt='404 page screenshot'>
