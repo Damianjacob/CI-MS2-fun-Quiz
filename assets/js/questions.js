@@ -54,7 +54,7 @@ let geographyQuestions = [
         answers: ['9%', '86%', '22%', '100%'],
         correctAnswer: '22%',
     },
-]
+];
 
 let scienceQuestions = [
     {
@@ -107,7 +107,7 @@ let scienceQuestions = [
         answers: ['1 Kilo', '500 grams', '250 grams', '10 grams'],
         correctAnswer: '250 grams',
     },
-]
+];
 
 let musicQuestions = [
     {
@@ -160,7 +160,7 @@ let musicQuestions = [
         answers: ['Empty orchestra', 'Sing along', 'Silent singer', 'Loud voice'],
         correctAnswer: 'Empty orchestra',
     },
-]
+];
 
 let animalsQuestions = [
     {
@@ -213,5 +213,5 @@ let animalsQuestions = [
         answers: ['Pink', 'White', 'Yellow', 'Black'],
         correctAnswer: 'Black',
     },
-]
+];
 

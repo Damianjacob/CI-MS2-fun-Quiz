@@ -1,5 +1,5 @@
 // quiz variables
-let currentCategory
+let currentCategory;
 let geographyQuestionIndex = 0;
 let scienceQuestionIndex = 0;
 let musicQuestionIndex = 0;
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-})
+});
 
-let categoryTitle = document.getElementById('quiz-category-title')
+let categoryTitle = document.getElementById('quiz-category-title');
 /**hides the category buttons that don't correspond to the current category */
 function hideCategories() {
     let gButton = document.getElementById('geography-button');
@@ -33,32 +33,32 @@ function hideCategories() {
     let mButton = document.getElementById('music-button');
     let aButton = document.getElementById('animals-button');
 
-    categoryTitle.style.display = 'block';
+    document.getElementById('quiz-category-title').style.display = 'block';
 
     if (currentCategory == 'geography') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Geography';
+        document.getElementById('quiz-category-title').innerText = 'Geography';
     } else if (currentCategory == 'science') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Science';
+        document.getElementById('quiz-category-title').innerText = 'Science';
     } else if (currentCategory == 'music') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Music';
+        document.getElementById('quiz-category-title').innerText = 'Music';
     } else if (currentCategory == 'animals') {
         gButton.style.display = 'none';
         sButton.style.display = 'none';
         mButton.style.display = 'none';
         aButton.style.display = 'none';
-        categoryTitle.innerText = 'Animals';
+        document.getElementById('quiz-category-title').innerText = 'Animals';
     } else {
         console.log('Error: unknown category');
     }
@@ -66,7 +66,7 @@ function hideCategories() {
 
 /**unhides all the category buttons */
 function unhideCategories() {
-    categoryTitle.style.display = 'none';
+    document.getElementById('quiz-category-title').style.display = 'none';
     let categoryButtons = document.getElementsByClassName('category-button');
     for (btn of categoryButtons) {
         btn.style.display = 'inline-block';
@@ -181,7 +181,7 @@ function checkAnswer() {
         }
     }
 
-    let selectedRadioID = getSelectedAnswerRadio().getAttribute('id')
+    let selectedRadioID = getSelectedAnswerRadio().getAttribute('id');
 
     /**returns the label attached to the radio button which the user has selected 
     */
@@ -279,7 +279,7 @@ function gameOver() {
     animalsQuestionIndex = 0;
     timesAnswerChecked = 0;
     unhideCategories();
-    categoryTitle = '';
+    document.getElementById('quiz-category-title') = '';
     for (option of options) {
         option.style.backgroundColor = 'white';
     }
@@ -294,7 +294,7 @@ let popUpMsgs = document.getElementsByClassName('pop-up-msgs');
 for (msg of popUpMsgs) {
     msg.addEventListener('click', function () {
         this.style.display = 'none';
-    })
+    });
 }
 
 let winnerMsg = document.getElementById('win-msg');
@@ -311,7 +311,7 @@ function wonTheGame() {
 let question = document.getElementById('question');
 let answerOptions = document.getElementsByClassName('answer-option');
 
-let geographyWinDiv = document.getElementById('geography-done')
+let geographyWinDiv = document.getElementById('geography-done');
 /**
  * displays question and answers from the geographyQuestions array in questions.js and then
  * adds 1 to the geographyQuestionIndex variable. if that variable reaches the length of the geographyQuestions array,
