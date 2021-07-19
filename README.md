@@ -130,14 +130,29 @@ No errors were found when passing through the official (Jigsaw) validator.
 <a href='https://jigsaw.w3.org/css-validator/validator'>Go to validator</a>
 <details>
 <summary>Screenshot of CSS validator</summary>
-<img src='assets/docs/validation/css-style' alt='footer screenshot'>
+<img src='assets/docs/validation/css-style.png' alt='css validator screenshot'>
 </details>
 
 ### ACCESSIBILITY
-
+There were no violations regarding accessibility.
+<details>
+<summary>Screenshot of accessibility validator</summary>
+<img src='assets/docs/validation/accessibility.png' alt='accessibility screenshot'>
+</details>
+<details>
+<summary>Screenshot 2 of accessibility validator</summary>
+<img src='assets/docs/validation/accessibility-two.png' alt='accessibility screenshot'>
+</details>
 
 ### LIGHTHOUSE
-
+<details>
+<summary>Screenshot of lighthouse test</summary>
+<img src='assets/docs/validation/lighthouse.png' alt='lighthouse test screenshot'>
+</details>
+<details>
+<summary>Screenshot 2 of lighthouse test</summary>
+<img src='assets/docs/validation/lighthouse-two.png' alt='lighthouse test screenshot'>
+</details>
 
 ### Fixed errors
 There have been some errors which i needed to fix:
