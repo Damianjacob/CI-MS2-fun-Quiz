@@ -46,6 +46,7 @@ The goal of this project is to create an interactive website that contains a qui
 5. "As a user who wants to beat the game, i expect to be able to decide myself when to go to the next question"
 6. "As a gamer i expect the game to tell me when i've completed a section of it"
 7. "As a user i expect to see an error message if i do something incorrectly"
+8. "As a user who has different devices, i expect the site to be responsive and to work on all my devices"
 
 ## Site Owner Goals
 1. To have an good-looking site that incourages users to play
@@ -92,7 +93,6 @@ I used html and css for designing the page and JavaScript for the quiz and the u
 
 ## Features
 ### Existing features
-<!-- ADD DROPDOWN IMAGES FOR ALL FEATURES -->
 Nav Bar:
 The nav bar is very simple and consists of the logo on the left and a link to the "how to play" page on the right side.
 <details>
@@ -124,7 +124,7 @@ The quiz area is where the user sees the question and can select their answer. A
 Pop up messages: 
 There are different pop-up messages: for congratulating the user, indicating that the game is over or indicating that there was an error.
 <details>
-<summary>Screenshot of error message</summary>
+<summary>Screenshot of error message one</summary>
 <img src='docs/features/error-msg-one.png' alt='error message screenshot'>
 </details>
 <details>
@@ -210,6 +210,7 @@ Other bugs:
 - Grids: The grid's content in both the category area and the quiz area were not behaving as i expected, with the single elements going in a different order than i wanted. I resolved this by specifying the row and column of these elements where necessary.
 - In order to check if the user is not submitting the same answer twice, i created two variables: timesAnswerChecked, which measures how many times the user checked an answer and questionArrayIndex, which is assigned to a function that returns the index of the current question in the current answer array.
 They were supposed to be equal, and if they weren't an error message would display, but instead the error message would display always. After a while i realised that there was a simple reason: the index variable would always be larger by 1 because timesAnswerChecked only increased AFTER clicking on the "check answer" button. The simple solution was to check whether timesAnswerChecked was equal to the index minus 1.
+- At the very end i noticed that after finishing a category and clicking on a new one would not change the answer options but only the question. The cause was the variable categoryTitle, so i deleted that variable and wrote it's value in most instances where i had used that variable.
 
 ## Deployment
 The site was deployed to Github pages. See the live link: https://damianjacob.github.io/CI-MS2-fun-Quiz/index.html
