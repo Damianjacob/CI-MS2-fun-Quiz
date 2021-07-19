@@ -1,6 +1,33 @@
 # CI-MS2-fun-Quiz
 https://damianjacob.github.io/CI-MS2-fun-Quiz/
 
+- [CI-MS2-fun-Quiz](#ci-ms2-fun-quiz)
+  * [User Goals](#user-goals)
+  * [User Stories](#user-stories)
+  * [Site Owner Goals](#site-owner-goals)
+  * [Design Choices](#design-choices)
+  * [Colors](#colors)
+  * [Fonts](#fonts)
+  * [Structure](#structure)
+  * [Wireframes](#wireframes)
+  * [Technologies used](#technologies-used)
+  * [Features](#features)
+    + [Existing features](#existing-features)
+  * [Testing](#testing)
+    + [HTML](#html)
+    + [CSS](#css)
+    + [ACCESSIBILITY](#accessibility)
+    + [LIGHTHOUSE](#lighthouse)
+    + [Fixed errors](#fixed-errors)
+  * [Bugs](#bugs)
+  * [Deployment](#deployment)
+  * [Credit](#credit)
+    + [Content](#content)
+    + [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 <img src='assets/docs/amiresponsive.png' alt='Am i responsive screenshot'>
 The goal of this project is to create an interactive website that contains a quiz game. The site is targeted towards people of all ages who want to have fun and test their knowledge.
 
@@ -65,25 +92,28 @@ I used html and css for designing the page and JavaScript for the quiz and the u
 ### Existing features
 <!-- ADD DROPDOWN IMAGES FOR ALL FEATURES -->
 - Nav Bar
-The nav bar is very simple and consists of the logo on the left and a link to the "how to play" page on the right side.
+<br>The nav bar is very simple and consists of the logo on the left and a link to the "how to play" page on the right side.
 <details>
 <summary>Screenshot of navbar</summary>
 <img src='assets/docs/features/navbar.png' alt='nav bar screenshot'>
 </details>
 
 - Score area
+<br> The score area is where the user can see their score and life points. The score increases when the user answers correctly and the life points decrease when the user answers incorrectly.
 <details>
 <summary>Screenshot of score area</summary>
 <img src='assets/docs/features/score-area.png' alt='score area screenshot'>
 </details>
 
 - Categories
+<br>There are four quiz categories from which the user can choose. Once the user chooses one, the buttons disappear and the user has to answer to all questions in that category before moving on to the next category.
 <details>
 <summary>Screenshot of categories</summary>
 <img src='assets/docs/features/categories.png' alt='categories screenshot'>
 </details>
 
 - Quiz area
+<br>
 The quiz area is where the user sees the question and can select their answer. After confirming the answer, the correct answer will be highlighted in green and if the user selected an incorrect answer, that one will be highlighted in red.
 <details>
 <summary>Screenshot of quiz area</summary>
@@ -91,6 +121,7 @@ The quiz area is where the user sees the question and can select their answer. A
 </details>
 
 - Pop up messages
+<br>
 There are different pop-up messages: for congratulating the user, indicating that the game is over or indicating that there was an error.
 <details>
 <summary>Screenshot of error message</summary>
@@ -106,6 +137,7 @@ There are different pop-up messages: for congratulating the user, indicating tha
 </details>
 
 - Footer
+<br> The footer is simple and contains the social media links.
 <details>
 <summary>Screenshot of footer</summary>
 <img src='assets/docs/features/quiz-area.png' alt='footer screenshot'>
